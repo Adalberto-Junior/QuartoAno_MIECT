@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "resto",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "nGRst",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,273 @@
+|encoderCRC8
+an[0] => gateXOR4:r2.x0
+an[1] => gateXOR4:r2.x1
+an[2] => gateXOR4:r2.x2
+an[3] => gateXOR4:r2.x3
+an[4] => gateXOR4:r3.x0
+an[5] => gateXOR4:r3.x1
+an[6] => gateXOR4:r3.x2
+an[7] => gateXOR4:r3.x3
+an[8] => gateXOR2:c0.x0
+an[8] => gateXOR4:x2a.x0
+an[8] => gateXOR4:xa.x0
+an[9] => gateXOR2:c0.x1
+an[9] => gateXOR2:c1.x0
+an[9] => gateXOR4:x3a.x0
+an[10] => gateXOR2:c1.x1
+an[10] => gateXOR2:c2.x0
+an[10] => gateXOR4:x2a.x1
+an[11] => gateXOR4:c3.x0
+an[11] => gateXOR4:x7a.x1
+an[11] => gateXOR4:x3a.x1
+an[12] => gateXOR2:c2.x1
+an[12] => gateXOR4:c3.x1
+an[13] => gateXOR4:c3.x2
+an[13] => gateXOR2:c5.x0
+an[14] => gateXOR4:c3.x3
+an[14] => gateXOR2:c6.x0
+an[14] => gateXOR4:x3a.x3
+an[15] => gateXOR2:c37.x0
+an[15] => gateXOR2:c5.x1
+an[15] => gateXOR4:x4a.x1
+an[16] => gateXOR2:c6.x1
+an[16] => gateXOR4:xa.x2
+an[17] => gateXOR4:x4a.x2
+an[17] => gateXOR4:x2a.x3
+an[17] => gateXOR4:xa.x3
+an[18] => gateXOR4:x5a.x3
+an[18] => gateXOR4:x3b.x1
+an[18] => gateXOR2:x2b.x1
+an[19] => gateXOR4:x6.x2
+an[19] => gateXOR4:x4a.x3
+an[19] => gateXOR4:x3b.x2
+an[20] => gateXOR4:x7a.x3
+an[20] => gateXOR2:x5b.x1
+an[20] => gateXOR2:x4b.x1
+an[21] => gateXOR2:c13.x0
+an[21] => gateXOR2:x7b.x1
+an[21] => gateXOR2:x2c.x1
+an[21] => gateXOR4:x0a.x3
+an[22] => gateXOR2:x5c.x1
+an[22] => gateXOR4:x3b.x3
+an[22] => gateXOR2:x0b.x1
+an[23] => gateXOR2:c13.x1
+an[23] => gateXOR2:x4c.x1
+error << gateXOR4:err.y
+
+
+|encoderCRC8|gateXOR2:c0
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:c1
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:c2
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:c3
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:c37
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:c5
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:c6
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:c13
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:x7a
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:x7b
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:x6
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:x5a
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:x5b
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:x5c
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:x4a
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:x4b
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:x4c
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:x3a
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:x3b
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:x2a
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:x2b
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:x2c
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:xa
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:xb
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:x0a
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR2:x0b
+x0 => y.IN0
+x1 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:r0
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:r1
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:r2
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:r3
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoderCRC8|gateXOR4:err
+x0 => y.IN0
+x1 => y.IN1
+x2 => y.IN1
+x3 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

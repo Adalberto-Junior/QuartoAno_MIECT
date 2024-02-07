@@ -1,0 +1,1309 @@
+|EncoderCRC8
+nGRst => control:con.nGRst
+clk => shiftRegist_24bit:shfR.clk
+clk => parReg_9bit:par9.clk
+clk => binCounter_6bit:bc.clk
+clk => control:con.clk
+dataIn[0] => shiftRegist_24bit:shfR.dataPsIn[0]
+dataIn[1] => shiftRegist_24bit:shfR.dataPsIn[1]
+dataIn[2] => shiftRegist_24bit:shfR.dataPsIn[2]
+dataIn[3] => shiftRegist_24bit:shfR.dataPsIn[3]
+dataIn[4] => shiftRegist_24bit:shfR.dataPsIn[4]
+dataIn[5] => shiftRegist_24bit:shfR.dataPsIn[5]
+dataIn[6] => shiftRegist_24bit:shfR.dataPsIn[6]
+dataIn[7] => shiftRegist_24bit:shfR.dataPsIn[7]
+dataIn[8] => shiftRegist_24bit:shfR.dataPsIn[8]
+dataIn[9] => shiftRegist_24bit:shfR.dataPsIn[9]
+dataIn[10] => shiftRegist_24bit:shfR.dataPsIn[10]
+dataIn[11] => shiftRegist_24bit:shfR.dataPsIn[11]
+dataIn[12] => shiftRegist_24bit:shfR.dataPsIn[12]
+dataIn[13] => shiftRegist_24bit:shfR.dataPsIn[13]
+dataIn[14] => shiftRegist_24bit:shfR.dataPsIn[14]
+dataIn[15] => shiftRegist_24bit:shfR.dataPsIn[15]
+ar[0] <= block_of_type_1:div.ri_k[0]
+ar[1] <= block_of_type_1:div.ri_k[1]
+ar[2] <= block_of_type_1:div.ri_k[2]
+ar[3] <= block_of_type_1:div.ri_k[3]
+ar[4] <= block_of_type_1:div.ri_k[4]
+ar[5] <= block_of_type_1:div.ri_k[5]
+ar[6] <= block_of_type_1:div.ri_k[6]
+ar[7] <= block_of_type_1:div.ri_k[7]
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR
+nRst => flipFlopDPET:ff00.nRst
+nRst => flipFlopDPET:ff01.nRst
+nRst => flipFlopDPET:ff02.nRst
+nRst => flipFlopDPET:ff03.nRst
+nRst => flipFlopDPET:ff04.nRst
+nRst => flipFlopDPET:ff05.nRst
+nRst => flipFlopDPET:ff06.nRst
+nRst => flipFlopDPET:ff07.nRst
+nRst => flipFlopDPET:ff08.nRst
+nRst => flipFlopDPET:ff09.nRst
+nRst => flipFlopDPET:ff10.nRst
+nRst => flipFlopDPET:ff11.nRst
+nRst => flipFlopDPET:ff12.nRst
+nRst => flipFlopDPET:ff13.nRst
+nRst => flipFlopDPET:ff14.nRst
+nRst => flipFlopDPET:ff15.nRst
+nRst => flipFlopDPET:ff16.nRst
+nRst => flipFlopDPET:ff17.nRst
+nRst => flipFlopDPET:ff18.nRst
+nRst => flipFlopDPET:ff19.nRst
+nRst => flipFlopDPET:ff20.nRst
+nRst => flipFlopDPET:ff21.nRst
+nRst => flipFlopDPET:ff22.nRst
+nRst => flipFlopDPET:ff23.nRst
+clk => flipFlopDPET:ff00.clk
+clk => flipFlopDPET:ff01.clk
+clk => flipFlopDPET:ff02.clk
+clk => flipFlopDPET:ff03.clk
+clk => flipFlopDPET:ff04.clk
+clk => flipFlopDPET:ff05.clk
+clk => flipFlopDPET:ff06.clk
+clk => flipFlopDPET:ff07.clk
+clk => flipFlopDPET:ff08.clk
+clk => flipFlopDPET:ff09.clk
+clk => flipFlopDPET:ff10.clk
+clk => flipFlopDPET:ff11.clk
+clk => flipFlopDPET:ff12.clk
+clk => flipFlopDPET:ff13.clk
+clk => flipFlopDPET:ff14.clk
+clk => flipFlopDPET:ff15.clk
+clk => flipFlopDPET:ff16.clk
+clk => flipFlopDPET:ff17.clk
+clk => flipFlopDPET:ff18.clk
+clk => flipFlopDPET:ff19.clk
+clk => flipFlopDPET:ff20.clk
+clk => flipFlopDPET:ff21.clk
+clk => flipFlopDPET:ff22.clk
+clk => flipFlopDPET:ff23.clk
+shift => gateAnd2:and02.x1
+shift => gateAnd2:and04.x1
+shift => gateAnd2:and06.x1
+shift => gateAnd2:and08.x1
+shift => gateAnd2:and10.x1
+shift => gateAnd2:and12.x1
+shift => gateAnd2:and14.x1
+shift => gateAnd2:and16.x1
+shift => gateAnd2:and18.x1
+shift => gateAnd2:and20.x1
+shift => gateAnd2:and22.x1
+shift => gateAnd2:and24.x1
+shift => gateAnd2:and26.x1
+shift => gateAnd2:and28.x1
+shift => gateAnd2:and30.x1
+shift => gateAnd2:and32.x1
+shift => gateAnd2:and34.x1
+shift => gateAnd2:and36.x1
+shift => gateAnd2:and38.x1
+shift => gateAnd2:and40.x1
+shift => gateAnd2:and42.x1
+shift => gateAnd2:and44.x1
+shift => gateAnd2:and46.x1
+shift => gateAnd2:and01.x1
+shift => gateAnd2:and03.x1
+shift => gateAnd2:and05.x1
+shift => gateAnd2:and07.x1
+shift => gateAnd2:and09.x1
+shift => gateAnd2:and11.x1
+shift => gateAnd2:and13.x1
+shift => gateAnd2:and15.x1
+shift => gateAnd2:and17.x1
+shift => gateAnd2:and19.x1
+shift => gateAnd2:and21.x1
+shift => gateAnd2:and23.x1
+shift => gateAnd2:and25.x1
+shift => gateAnd2:and27.x1
+shift => gateAnd2:and29.x1
+shift => gateAnd2:and31.x1
+shift => gateAnd2:and33.x1
+shift => gateAnd2:and35.x1
+shift => gateAnd2:and37.x1
+shift => gateAnd2:and39.x1
+shift => gateAnd2:and41.x1
+shift => gateAnd2:and43.x1
+shift => gateAnd2:and45.x1
+shift => gateAnd2:and47.x1
+dataPsIn[0] => gateAnd2:and31.x2
+dataPsIn[1] => gateAnd2:and29.x2
+dataPsIn[2] => gateAnd2:and27.x2
+dataPsIn[3] => gateAnd2:and25.x2
+dataPsIn[4] => gateAnd2:and23.x2
+dataPsIn[5] => gateAnd2:and21.x2
+dataPsIn[6] => gateAnd2:and19.x2
+dataPsIn[7] => gateAnd2:and17.x2
+dataPsIn[8] => gateAnd2:and15.x2
+dataPsIn[9] => gateAnd2:and13.x2
+dataPsIn[10] => gateAnd2:and11.x2
+dataPsIn[11] => gateAnd2:and09.x2
+dataPsIn[12] => gateAnd2:and07.x2
+dataPsIn[13] => gateAnd2:and05.x2
+dataPsIn[14] => gateAnd2:and03.x2
+dataPsIn[15] => gateAnd2:and01.x2
+datalsIn[0] => gateAnd2:and47.x2
+datalsIn[1] => gateAnd2:and45.x2
+datalsIn[2] => gateAnd2:and43.x2
+datalsIn[3] => gateAnd2:and41.x2
+datalsIn[4] => gateAnd2:and39.x2
+datalsIn[5] => gateAnd2:and37.x2
+datalsIn[6] => gateAnd2:and35.x2
+datalsIn[7] => gateAnd2:and33.x2
+Q <= flipFlopDPET:ff23.Q
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and01
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and02
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and03
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and04
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and05
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and06
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and07
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and08
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and09
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and10
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and11
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and12
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and13
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and14
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and15
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and16
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and17
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and18
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and19
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and20
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and21
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and22
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and23
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and24
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and25
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and26
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and27
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and28
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and29
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and30
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and31
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and32
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and33
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and34
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and35
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and36
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and37
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and38
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and39
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and40
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and41
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and42
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and43
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and44
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and45
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and46
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateAnd2:and47
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or01
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or02
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or03
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or04
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or05
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or06
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or07
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or08
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or09
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or10
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or11
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or12
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or13
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or14
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or15
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or16
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or17
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or18
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or19
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or20
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or21
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or22
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|gateOr2:or23
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff00
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff01
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff02
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff03
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff04
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff05
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff06
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff07
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff08
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff09
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff10
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff11
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff12
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff13
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff14
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff15
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff16
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff17
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff18
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff19
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff20
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff21
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff22
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|shiftRegist_24bit:shfR|flipFlopDPET:ff23
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|parReg_9bit:par9
+nRst => flipFlopDPET:ff0.nRst
+nRst => flipFlopDPET:ff1.nRst
+nRst => flipFlopDPET:ff2.nRst
+nRst => flipFlopDPET:ff3.nRst
+nRst => flipFlopDPET:ff4.nRst
+nRst => flipFlopDPET:ff5.nRst
+nRst => flipFlopDPET:ff6.nRst
+nRst => flipFlopDPET:ff7.nRst
+nRst => flipFlopDPET:ff8.nRst
+clk => flipFlopDPET:ff0.clk
+clk => flipFlopDPET:ff1.clk
+clk => flipFlopDPET:ff2.clk
+clk => flipFlopDPET:ff3.clk
+clk => flipFlopDPET:ff4.clk
+clk => flipFlopDPET:ff5.clk
+clk => flipFlopDPET:ff6.clk
+clk => flipFlopDPET:ff7.clk
+clk => flipFlopDPET:ff8.clk
+D0 => flipFlopDPET:ff0.D
+D[0] => flipFlopDPET:ff1.D
+D[1] => flipFlopDPET:ff2.D
+D[2] => flipFlopDPET:ff3.D
+D[3] => flipFlopDPET:ff4.D
+D[4] => flipFlopDPET:ff5.D
+D[5] => flipFlopDPET:ff6.D
+D[6] => flipFlopDPET:ff7.D
+D[7] => flipFlopDPET:ff8.D
+Q[0] <= flipFlopDPET:ff0.Q
+Q[1] <= flipFlopDPET:ff1.Q
+Q[2] <= flipFlopDPET:ff2.Q
+Q[3] <= flipFlopDPET:ff3.Q
+Q[4] <= flipFlopDPET:ff4.Q
+Q[5] <= flipFlopDPET:ff5.Q
+Q[6] <= flipFlopDPET:ff6.Q
+Q[7] <= flipFlopDPET:ff7.Q
+Q[8] <= flipFlopDPET:ff8.Q
+
+
+|EncoderCRC8|parReg_9bit:par9|flipFlopDPET:ff0
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|parReg_9bit:par9|flipFlopDPET:ff1
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|parReg_9bit:par9|flipFlopDPET:ff2
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|parReg_9bit:par9|flipFlopDPET:ff3
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|parReg_9bit:par9|flipFlopDPET:ff4
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|parReg_9bit:par9|flipFlopDPET:ff5
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|parReg_9bit:par9|flipFlopDPET:ff6
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|parReg_9bit:par9|flipFlopDPET:ff7
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|parReg_9bit:par9|flipFlopDPET:ff8
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|block_of_type_1:div
+ri1_k[0] => gateXOR2:ri0.x2
+ri1_k[1] => gateXOR2:ri1.x2
+ri1_k[2] => gateXOR2:ri2.x2
+ri1_k[3] => ri_k[3].DATAIN
+ri1_k[4] => ri_k[4].DATAIN
+ri1_k[5] => gateXOR2:ri5.x2
+ri1_k[6] => ri_k[6].DATAIN
+ri1_k[7] => gateXOR2:ri7.x2
+ri1_k[8] => gateXOR2:ri7.x1
+ri1_k[8] => gateXOR2:ri5.x1
+ri1_k[8] => gateXOR2:ri2.x1
+ri1_k[8] => gateXOR2:ri1.x1
+ri1_k[8] => gateXOR2:ri0.x1
+ri_k[0] <= gateXOR2:ri0.y
+ri_k[1] <= gateXOR2:ri1.y
+ri_k[2] <= gateXOR2:ri2.y
+ri_k[3] <= ri1_k[3].DB_MAX_OUTPUT_PORT_TYPE
+ri_k[4] <= ri1_k[4].DB_MAX_OUTPUT_PORT_TYPE
+ri_k[5] <= gateXOR2:ri5.y
+ri_k[6] <= ri1_k[6].DB_MAX_OUTPUT_PORT_TYPE
+ri_k[7] <= gateXOR2:ri7.y
+
+
+|EncoderCRC8|block_of_type_1:div|gateXor2:ri7
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|block_of_type_1:div|gateXor2:ri5
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|block_of_type_1:div|gateXor2:ri2
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|block_of_type_1:div|gateXor2:ri1
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|block_of_type_1:div|gateXor2:ri0
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc
+nRst => flipFlopDPET:ff0.nRst
+nRst => flipFlopDPET:ff1.nRst
+nRst => flipFlopDPET:ff2.nRst
+nRst => flipFlopDPET:ff3.nRst
+nRst => flipFlopDPET:ff4.nRst
+nRst => flipFlopDPET:ff5.nRst
+clk => flipFlopDPET:ff0.clk
+clk => flipFlopDPET:ff1.clk
+clk => flipFlopDPET:ff2.clk
+clk => flipFlopDPET:ff3.clk
+clk => flipFlopDPET:ff4.clk
+clk => flipFlopDPET:ff5.clk
+c[0] <= flipFlopDPET:ff0.Q
+c[1] <= flipFlopDPET:ff1.Q
+c[2] <= flipFlopDPET:ff2.Q
+c[3] <= flipFlopDPET:ff3.Q
+c[4] <= flipFlopDPET:ff4.Q
+c[5] <= flipFlopDPET:ff5.Q
+
+
+|EncoderCRC8|binCounter_6bit:bc|gateAnd2:ad1
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|gateAnd2:ad2
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|gateAnd2:ad3
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|gateAnd2:ad4
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|gateXor2:xr1
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|gateXor2:xr2
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|gateXor2:xr3
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|gateXor2:xr4
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|gateXor2:xr5
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|flipFlopDPET:ff0
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|flipFlopDPET:ff1
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|flipFlopDPET:ff2
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|flipFlopDPET:ff3
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|flipFlopDPET:ff4
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|binCounter_6bit:bc|flipFlopDPET:ff5
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|control:con
+nGRst => gateNand2:nad1.x1
+nGRst => gateNand2:nad3.x1
+clk => gateNand2:nad2.x1
+clk => gateNand2:nad4.x1
+clk => gateNor2:nord.x1
+add[0] => contMem:cMem.add[0]
+add[1] => contMem:cMem.add[1]
+add[2] => contMem:cMem.add[2]
+add[3] => contMem:cMem.add[3]
+add[4] => contMem:cMem.add[4]
+add[5] => contMem:cMem.add[5]
+nRst <= gateNand2:nad2.y
+nSetO <= gateNand2:nad4.y
+clkO <= gateNor2:nord.y
+
+
+|EncoderCRC8|control:con|contMem:cMem
+add[0] => prog.RADDR
+add[1] => prog.RADDR1
+add[2] => prog.RADDR2
+add[3] => prog.RADDR3
+add[4] => prog.RADDR4
+add[5] => prog.RADDR5
+dOut[0] <= prog.DATAOUT
+dOut[1] <= prog.DATAOUT1
+dOut[2] <= prog.DATAOUT2
+
+
+|EncoderCRC8|control:con|gateNand2:nad1
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|control:con|gateNand2:nad2
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|control:con|gateNand2:nad3
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|control:con|gateNand2:nad4
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderCRC8|control:con|gateNor2:nord
+x1 => y.IN0
+x2 => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

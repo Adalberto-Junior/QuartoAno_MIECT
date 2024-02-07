@@ -1,0 +1,102 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Adalb/Desktop/QuartoAno/AAD/Pratico/Arquitetura/Enco/simulation/qsim
+Eencodercrc8
+Z1 w1701109673
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 cD3@N^MdoDolN5@R6?T[V1
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 3BCIeZzdIHLCX<;R;K38G3
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 PQDYM9fR]Wek<A7X8bA8S1
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 >EJOc2K4@P4f?njWHdOcd0
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z10 DPx6 altera 28 altera_primitives_components 0 22 14j`ZKHCzSI;]V?hmAE6_1
+R0
+Z11 8EncoderCRC8.vho
+Z12 FEncoderCRC8.vho
+l0
+L39
+V]Vn4O0XgfMRTe1<JmVcgW3
+!s100 77k6flOhQh]PM0j=JDgja0
+Z13 OV;C;10.5b;63
+32
+Z14 !s110 1701109675
+!i10b 1
+Z15 !s108 1701109674.000000
+Z16 !s90 -work|work|EncoderCRC8.vho|
+Z17 !s107 EncoderCRC8.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 11 encodercrc8 0 22 ]Vn4O0XgfMRTe1<JmVcgW3
+l81
+L55
+VG7h8iO;I6oU>9FWUo4m;=0
+!s100 DEmLz]?bjO23M@KZS0YLU1
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Eencodercrc8_vhd_vec_tst
+Z20 w1701109672
+R8
+R9
+R0
+Z21 8encoderTest.vwf.vht
+Z22 FencoderTest.vwf.vht
+l0
+L32
+VQPM35fdAZAoWl6I2j5fBR1
+!s100 K5IF5zl0UCABo=fk5PdjQ3
+R13
+32
+R14
+!i10b 1
+Z23 !s108 1701109675.000000
+Z24 !s90 -work|work|encoderTest.vwf.vht|
+Z25 !s107 encoderTest.vwf.vht|
+!i113 1
+R18
+R19
+Aencodercrc8_arch
+R8
+R9
+Z26 DEx4 work 23 encodercrc8_vhd_vec_tst 0 22 QPM35fdAZAoWl6I2j5fBR1
+l49
+L34
+VkP>@BDK:KK@SmmanGOR9U2
+!s100 Y4NV:ZnE[=H_ZJ4hlA[RP1
+R13
+32
+R14
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R18
+R19
