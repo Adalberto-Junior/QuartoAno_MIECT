@@ -1,0 +1,6 @@
+{
+  "metric_mse": 6.0312,
+  "metric_mae": 1.3088,
+  "metrics": "{'accuracy': 0.641}",
+  "container_id": "7fb220edc35f"
+}

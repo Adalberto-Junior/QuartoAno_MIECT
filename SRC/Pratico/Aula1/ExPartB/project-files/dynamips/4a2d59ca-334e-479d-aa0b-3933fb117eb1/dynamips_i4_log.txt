@@ -1,0 +1,93 @@
+Feb 27 14:58:08.609 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Feb 27 14:58:08.610 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 52762.
+Feb 27 14:58:08.614 HYPERVISOR: exec_cmd: hypervisor version 
+Feb 27 14:58:08.614 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Adalb\Desktop\QuartoAno\SRC\Pratico\Aula1\ExPartB\project-files\dynamips 
+Feb 27 14:58:08.614 GENERAL: working_dir=C:\Users\Adalb\Desktop\QuartoAno\SRC\Pratico\Aula1\ExPartB\project-files\dynamips
+Feb 27 14:58:08.614 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Adalb\Desktop\QuartoAno\SRC\Pratico\Aula1\ExPartB\project-files\dynamips\e1e50f46-c3a8-4d27-b17b-9c309ce8fcf5 
+Feb 27 14:58:08.615 GENERAL: working_dir=C:\Users\Adalb\Desktop\QuartoAno\SRC\Pratico\Aula1\ExPartB\project-files\dynamips\e1e50f46-c3a8-4d27-b17b-9c309ce8fcf5
+Feb 27 14:58:08.615 HYPERVISOR: exec_cmd: vm create ESW1 3 c3725 
+Feb 27 14:58:08.616 VM: VM ESW1 created.
+Feb 27 14:58:08.616 HYPERVISOR: exec_cmd: vm set_con_tcp_port ESW1 5009 
+Feb 27 14:58:08.617 HYPERVISOR: exec_cmd: c3725 get_mac_addr ESW1 
+Feb 27 14:58:08.617 HYPERVISOR: exec_cmd: vm set_disk0 ESW1 1 
+Feb 27 14:58:08.617 HYPERVISOR: exec_cmd: vm set_exec_area ESW1 64 
+Feb 27 14:58:08.617 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 14:58:08.618 HYPERVISOR: exec_cmd: vm set_idle_pc ESW1 0x60a6a1e0 
+Feb 27 14:58:08.620 HYPERVISOR: exec_cmd: vm set_ios ESW1 C:/Users/Adalb/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21 (1).image 
+Feb 27 14:58:08.620 HYPERVISOR: exec_cmd: c3725 set_mac_addr ESW1 c203.0594.0000 
+Feb 27 14:58:08.620 HYPERVISOR: exec_cmd: vm set_nvram ESW1 256 
+Feb 27 14:58:08.621 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 14:58:08.621 HYPERVISOR: exec_cmd: vm slot_add_binding ESW1 1 0 NM-16ESW 
+Feb 27 14:58:10.120 HYPERVISOR: exec_cmd: nio create_udp udp-9a30ffce-90b0-43e6-93de-cd104e018785 20016 127.0.0.1 20017 
+Feb 27 14:58:10.378 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW1 1 15 udp-9a30ffce-90b0-43e6-93de-cd104e018785 
+Feb 27 14:58:10.379 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 14:58:10.420 HYPERVISOR: exec_cmd: nio create_udp udp-4d446616-c57f-47a0-ba1f-a6ce907081ed 20020 127.0.0.1 20021 
+Feb 27 14:58:10.423 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW1 1 14 udp-4d446616-c57f-47a0-ba1f-a6ce907081ed 
+Feb 27 14:58:10.424 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 15:02:42.335 HYPERVISOR: exec_cmd: vm create Ghost 0 c3725 
+Feb 27 15:02:42.338 VM: VM Ghost created.
+Feb 27 15:02:42.342 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/Adalb/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21 (1).image 
+Feb 27 15:02:42.343 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Feb 27 15:02:42.343 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost C:\Users\Adalb\Desktop\QuartoAno\SRC\Pratico\Aula1\ExPartB\project-files\dynamips\c3725-advipservicesk9-mz.124-21 (1).image-128.ghost 
+Feb 27 15:02:42.344 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Feb 27 15:02:42.560 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Feb 27 15:02:42.562 HYPERVISOR: exec_cmd: vm start Ghost 
+Feb 27 15:02:43.185 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Feb 27 15:02:43.187 HYPERVISOR: exec_cmd: vm stop Ghost 
+Feb 27 15:02:43.267 VM: VM Ghost shutdown.
+Feb 27 15:02:43.268 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Feb 27 15:02:43.270 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Feb 27 15:02:43.270 VM: VM Ghost destroyed.
+Feb 27 15:02:43.290 HYPERVISOR: exec_cmd: vm set_ghost_status ESW1 2 
+Feb 27 15:02:43.290 HYPERVISOR: exec_cmd: vm set_ghost_file ESW1 C:\Users\Adalb\Desktop\QuartoAno\SRC\Pratico\Aula1\ExPartB\project-files\dynamips\c3725-advipservicesk9-mz.124-21 (1).image-128.ghost 
+Feb 27 15:02:43.291 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 15:02:43.292 HYPERVISOR: exec_cmd: vm set_config ESW1 configs\i3_startup-config.cfg 
+Feb 27 15:02:43.292 HYPERVISOR: exec_cmd: vm start ESW1 
+Feb 27 15:03:40.078 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 15:03:40.078 HYPERVISOR: exec_cmd: vm set_idle_pc_online ESW1 0 0x0 
+Feb 27 15:03:40.078 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 15:03:40.079 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 15:03:40.107 HYPERVISOR: exec_cmd: vm get_idle_pc_prop ESW1 0 
+Feb 27 15:03:55.187 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 15:03:55.187 HYPERVISOR: exec_cmd: vm set_idle_pc_online ESW1 0 0x60a6a1e0 
+Feb 27 15:03:55.187 HYPERVISOR: exec_cmd: vm cpu_usage ESW1 0 
+Feb 27 15:03:58.181 HYPERVISOR: exec_cmd: vm cpu_usage ESW1 0 
+Feb 27 15:09:13.879 HYPERVISOR: exec_cmd: vm extract_config ESW1 
+Feb 27 15:09:13.935 HYPERVISOR: exec_cmd: vm extract_config ESW1 
+Feb 27 15:28:12.536 HYPERVISOR: exec_cmd: vm set_ios ESW1 C:/Users/Adalb/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21 (1).image 
+Feb 27 15:28:55.985 HYPERVISOR: exec_cmd: vm set_ios ESW1 C:/Users/Adalb/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21 (1).image 
+Feb 27 15:28:56.030 HYPERVISOR: exec_cmd: vm set_ios ESW1 C:/Users/Adalb/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21 (1).image 
+Feb 27 15:28:57.041 HYPERVISOR: exec_cmd: vm set_ios ESW1 C:/Users/Adalb/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21 (1).image 
+Feb 27 15:28:57.084 HYPERVISOR: exec_cmd: vm set_ios ESW1 C:/Users/Adalb/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21 (1).image 
+Feb 27 15:28:57.841 HYPERVISOR: exec_cmd: vm set_ios ESW1 C:/Users/Adalb/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21 (1).image 
+Feb 27 15:28:57.895 HYPERVISOR: exec_cmd: vm set_ios ESW1 C:/Users/Adalb/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21 (1).image 
+Feb 27 15:29:01.692 HYPERVISOR: exec_cmd: vm set_ios ESW1 C:/Users/Adalb/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21 (1).image 
+Feb 27 15:32:22.121 HYPERVISOR: exec_cmd: vm set_ghost_status ESW1 2 
+Feb 27 15:32:22.122 HYPERVISOR: exec_cmd: vm set_ghost_file ESW1 C:\Users\Adalb\Desktop\QuartoAno\SRC\Pratico\Aula1\ExPartB\project-files\dynamips\c3725-advipservicesk9-mz.124-21 (1).image-128.ghost 
+Feb 27 15:32:22.122 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 15:37:14.567 HYPERVISOR: exec_cmd: vm extract_config ESW1 
+Feb 27 15:37:14.575 HYPERVISOR: exec_cmd: vm extract_config ESW1 
+Feb 27 15:47:41.390 HYPERVISOR: exec_cmd: nio bind_filter udp-4d446616-c57f-47a0-ba1f-a6ce907081ed 2 capture 
+Feb 27 15:47:41.390 HYPERVISOR: exec_cmd: nio setup_filter udp-4d446616-c57f-47a0-ba1f-a6ce907081ed 2 en10mb C:\Users\Adalb\Desktop\QuartoAno\SRC\Pratico\Aula1\ExPartB\project-files\captures\ESW1_FastEthernet114_to_ESW2_FastEthernet114.pcap 
+Feb 27 15:56:35.821 HYPERVISOR: exec_cmd: nio create_udp udp-314733a6-698e-4278-8d37-ed347844d2ab 20036 127.0.0.1 20037 
+Feb 27 15:56:35.824 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW1 1 13 udp-314733a6-698e-4278-8d37-ed347844d2ab 
+Feb 27 15:56:35.824 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 15:56:35.825 HYPERVISOR: exec_cmd: vm slot_enable_nio ESW1 1 13 
+Feb 27 15:56:44.882 HYPERVISOR: exec_cmd: nio create_udp udp-f7d66ac2-37e8-4017-9e47-455b711f364f 20042 127.0.0.1 20043 
+Feb 27 15:56:44.885 HYPERVISOR: exec_cmd: vm slot_add_nio_binding ESW1 1 12 udp-f7d66ac2-37e8-4017-9e47-455b711f364f 
+Feb 27 15:56:44.885 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 15:56:44.886 HYPERVISOR: exec_cmd: vm slot_enable_nio ESW1 1 12 
+Feb 27 15:59:12.913 HYPERVISOR: exec_cmd: nio unbind_filter udp-4d446616-c57f-47a0-ba1f-a6ce907081ed 2 
+Feb 27 16:00:11.230 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 16:00:11.230 HYPERVISOR: exec_cmd: vm stop ESW1 
+Feb 27 16:00:11.401 VM: VM ESW1 shutdown.
+Feb 27 16:00:11.402 HYPERVISOR: exec_cmd: vm extract_config ESW1 
+Feb 27 16:00:15.664 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 16:00:15.666 HYPERVISOR: exec_cmd: vm extract_config ESW1 
+Feb 27 16:00:15.893 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Feb 27 16:00:15.894 HYPERVISOR: exec_cmd: vm extract_config ESW1 
+Feb 27 16:00:15.896 HYPERVISOR: exec_cmd: vm delete ESW1 
+Feb 27 16:00:15.896 VM: VM ESW1 destroyed.
+Feb 27 16:00:15.897 HYPERVISOR: exec_cmd: hypervisor stop 
+Feb 27 16:00:15.958 HYPERVISOR: Stopped.
+Feb 27 16:00:15.958 GENERAL: reset done.

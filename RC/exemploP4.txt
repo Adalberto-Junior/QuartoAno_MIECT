@@ -1,0 +1,136 @@
+-- Contador horário com contagem decrescente
+
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity CountdownTimer is
+	port (
+		clk : in STD_LOGIC;
+		reset : in STD_LOGIC;
+		startStop : in STD_LOGIC;
+		btnUp : in STD_LOGIC;
+		btnDown : in STD_LOGIC;
+		led : out STD_LOGIC_VECTOR(7 downto 0)
+	);
+end entity;
+
+architecture Behavioral of CountdownTimer is
+	type State is (idle, running, paused);
+	signal pState, nState : State;
+	signal minutes, seconds : unsigned(7 downto 0);
+	signal point : STD_LOGIC;
+	signal counter1Hz : STD_LOGIC;
+	signal clk1Hz : STD_LOGIC;
+	signal ledAux : STD_LOGIC_VECTOR(3 downto 0);
+
+	component DebounceUnit is
+		port (
+			refClk : in STD_LOGIC;
+			dirtyIn : in STD_LOGIC;
+			pulsedOut : out STD_LOGIC
+		);
+	end component;
+
+	component PulseGenerator is
+		generic (
+			N : natural
+		);
+		port (
+			clk : in STD_LOGIC;
+			reset : in STD_LOGIC;
+			enable : in STD_LOGIC;
+			pulse_out : out STD_LOGIC
+		);
+	end component;
+
+	component BinCounter is
+		generic (
+			N : natural;
+			M : natural
+		);
+		port (
+			clk : in STD_LOGIC;
+			reset : in STD_LOGIC;
+			enable : in STD_LOGIC;
+			startC : in STD_LOGIC;
+			enableOut : out STD_LOGIC;
+			cnt : out STD_LOGIC_VECTOR(N downto 0)
+		);
+	end component;
+
+	component Nexys4DispDriver is
+		port (
+			clk : in STD_LOGIC;
+			clock_enable : in STD_LOGIC;
+			displayDi : in STD_LOGIC_VECTOR(7 downto 0);
+			displayPoint : in STD_LOGIC;
+			D0 : in STD_LOGIC_VECTOR(3 downto 0);
+			D1 : in STD_LOGIC_VECTOR(3 downto 0);
+			D2 : in STD_LOGIC_VECTOR(3 downto 0);
+			D3 : in STD_LOGIC_VECTOR(3 downto 0);
+			D4 : in STD_LOGIC_VECTOR(3 downto 0);
+			D5 : in STD_LOGIC_VECTOR(3 downto 0);
+			D6 : in STD_LOGIC_VECTOR(3 downto 0);
+			D7 : in STD_LOGIC_VECTOR(3 downto 0);
+			an : out STD_LOGIC_VECTOR(7 downto 0);
+			seg : out STD_LOGIC_VECTOR(6 downto 0);
+			dp : out STD_LOGIC
+		);
+	end component;
+
+begin
+	-- Debounce para botões
+	debounce_btnC: DebounceUnit
+		port map (
+			refClk => clk,
+			dirtyIn => startStop,
+			pulsedOut => pState <= nState
+		);
+
+	debounce_btnUp: DebounceUnit
+		port map (
+			refClk => clk,
+			dirtyIn => btnUp,
+			pulsedOut => inc_minutes
+		);
+
+	debounce_btnDown: DebounceUnit
+		port map (
+			refClk => clk,
+			dirtyIn => btnDown,
+			pulsedOut => dec_minutes
+		);
+
+	-- Gerador de clock de 1Hz
+	pulseGenerator1Hz: PulseGenerator
+		generic map (
+			N => 100_000_000
+		)
+		port map (
+			clk => clk,
+			reset => reset,
+			enable => '1',
+			pulse_out => counter1Hz
+		);
+
+	-- Contador de segundos
+	counterSeconds: BinCounter
+		generic map (
+			N => 7,
+			M => 5
+		)
+		port map (
+			clk => clk,
+			reset => reset,
+			enable => counter1Hz,
+			startC => pState = running,
+			enableOut => dec_seconds,
+			cnt => seconds
+		);
+
+	-- Contador de minutos
+	counterMinutes: BinCounter
+		generic map (
+			N => 7,
+			M => 

@@ -1,0 +1,229 @@
+
+	-----------------------------------------------------------------
+						Parte A - Pergunta 2
+	-----------------------------------------------------------------
+	
+	Describe schematically, addind the comments you deem appropriate about their functionality, the advantages and disadvantages, of the
+	three variants of the client-server model that were studied. Can they be implemented using either the message passing or the remote objects 
+	paradigms, or are they specific to one of these paradigms ?  (Teste1_2022)
+	
+-------------------------------
+-------------------------------
+
+		Variante Tipo 1 - Serialização de pedidos ("Request Serialization")
+		
+				Queue clients -------> Communication Channel <-------- Thread Base  - - - - - -> Server Proxy Agent 
+				Server Proxy Agent ---------> Shared Resource 
+				Communication Channel  <--------- Server Proxy Agent 
+		
+			--> Um processo cliente processado de cada vez. 
+			--> Não é necessário assegurar exclusividade mútua (Existe apenas um instanciacao do Server Proxy Agent de cada vez).
+			--> Solução muito simples, mas não eficiente porque o tempo de serviço não é minimizado.
+			--> Dá origem a espera prolongada (busy waiting) na tentativa de sincronização de multiplos processos cliente.
+			
+			
+		Variante Tipo 2 - Replicação do servidor ("Server Replication")
+		
+				Queue clients -------> Communication Channel <-------- Thread Base  - - - - - -> Server Proxy Agent 
+																																		 ........
+																																		 - - - - - -> Server Proxy Agent 
+				
+				Server Proxy Agent .... Server Proxy Agent ---------> Shared Resource (Monitors)
+				
+				Communication Channel  <--------- Server Proxy Agent ... Server Proxy Agent
+				
+				--> Processos cliente processados concorrentemente. 
+				--> A thread base para cada processo cliente instancia um server proxy agent e cada server proxy agent acede ao recurso partilhado.
+					Nesse sentido, é necessário garantir excluisividade mútua, adicionando o monitor ao recurso partilhado.
+					
+				--> Tempo de serviço é minimizado (Tira vantagem dos tempos mortos através da concorrencia).
+				--> Ativa a sincronização de diferentes processos clientes no mesmo recurso partilhado. 
+		
+		
+		Variante Tupo 3 - Replicação de Recursos ("Resource Replication")
+		
+			-->  O serviço está disponível em vários sistemas computacionais, cada um a executar o "server replication".
+			-->  O resurso partilhado é igual em cada servidor, podem assim haver múltiplas cópias. 
+		
+			--> Máximiza a disponibilidade do serviço e minimiza o tempo de resposta --> escalabilidade.
+			--> O serviço é mantido ativo mesmo que alguns servidores falhem.
+			--> Pedidos dos clientes distribuidos pelos servidores (DNS)
+
+			--> Qd. se aplica uma alteração numa das réplicas da SR é necessário manter as diferentes réplicas consistentes.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	Take message passing as the communication paradigm which was chosen to establish a client-server model among processes residing in different nodes 
+	of a distributed system. Draw a diagram that describes the functional interaction among the components of such a model, both at client and at the server 
+	side identifying each of them and explaining their role in the interaction. Assume the server replication variant.
+	
+	Refer in this context to what one means by message marshaling and unmarshaling. How are they enforced in Java ? (Teste1_2018)
+	
+-------------------------------
+------------------------------- 
+
+	Lado do Cliente :
+	
+				
+				main ----------------->  processos cooperantes					----------------> 		Stubs
+						  ----------------->  recurso partilhado remoto (stub)	---------------->      canal de comunicacao  ---------> outMessage/inMessage
+						  
+						  
+				main --> tipo de dados nao instanciado, entidade ativa
+				
+				processos cooperantes --> tipo de dados instanciado, entidade ativa
+				
+				Stubs --> tipos de dados instanciados, entidades passivas 
+	
+
+	Lado do Servidor :
+	
+			ServidorMain  ----------------->   canal de comunicacao  
+									  ----------------->   Server Proxy Agent 		-------------->  Interface Recurso partilhado   -------------->   Recurso Partilhado 
+																																													   -------------->   outMessage/inMessage
+									  ----------------->   Interface Recurso partilhado
+									  ----------------->   Recurso Partilhado 
+									  
+				
+				main --> tipo de dados nao instanciado, entidade ativa
+				
+				processos cooperantes --> tipo de dados instanciado, entidade ativa
+				
+				Stubs --> tipos de dados instanciados, entidades passivas 
+				
+			
+	Mensagem marshaling:	Operação de construir uma mensagem como uma sequência de bytes com toda a informação importante e necessária.
+	
+	Mensagem unmarshaling:	Operação de descodificar a informação dos bytes e perceber o que significa.
+	
+	Em java , estas operações são escondidas do programador. Apenas é necessário que o tipo de dados da mensagem seja definido como 
+	implementando a interface Serializable.
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	Take access to remote objects as the communication paradigm which was chosen to establish a client-server model among processes residing in 
+	different nodes of a distributed system. Draw a diagram that describes the distribution of the components of such a model, at the server side, by 
+	different computer systems, identifying each of them and explaining their role in the interaction. Assume that there are three remote objects positioned in 
+	geographically distant regions.
+	
+	Refer in the context of what one means by network tranparency. How can it be enforced in Java ?   (Teste2_2018)
+	
+-------------------------------
+-------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	Describe the publisher-subscriber model and explain how it fits in two application areas where it has become very popular. (Teste1_2017)
+	
+-------------------------------
+-------------------------------
+
+		O modelo publisher-subscriber é composto por:
+		
+			- Publishers (Múltiplos fornecedores de serviços): produzem informação de acordo com diferentes tópicos e atuam como os clientes do broker.
+																									O broker guarda essa informação e torna-a disponível para os grupos subscriber que tenham 
+																									subscrevido explicitamente o topico associado a esses dados.
+																									
+			- Subscribers (Múltiplos recipientes dos serviços): Atuam como os clientes dos publishers e do broker.
+																									publishers --> os subscribers consomem informação especifica produzida por pelos publishers.
+																									broker -> os subscribers dizem qual os tópicos que pretedem saber e quando devem ser alertados 
+																													quando existe nova info.
+																													
+			Nota: A diferença entre este modelo e o modelo cliente-servidor é que neste modelo não existe uma interacao sincrona.
+			
+			Exemplos de áreas de aplicação:
+			
+				--> Eletronic trading  (e-trading)
+				
+						Seller 0 ... Seller N-1 -------->   Trading plataform  <---------------  Buyer 0  .... Buyer N-1 
+				
+				--> Eletronic mail (e-mail)
+  
+					mail client ----> mail server <------------> mail server <----------------- mail client 
+														|										|
+														|										|
+					mail client ----> mail server <------------> mail server <----------------- mail client 		
+
+					mail servers --> brokers para os mail clients locais + outros mails servers para gestao de mensagens locais.
+										  --> publishers para mail servers para encaminhar mesagens remotas
+										  
+					mail clients  --> publishers para enviar mensagens 
+										  --> subscribers para receberem mensagens 
+											
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	Considere a troca de mensagens como o paradigma de comunicação que foi escolhido para se estabelecer um modelo cliente-servidor na variante de 
+	cópia de recursos entre processos residentes nos diferentes nós de processamento de um sistema distribuído e admita que existem duas cópias.
+	Apresente um diagrama esquemático que descreva a interacção funcional entre os diferentes componentes de um tal sistema no lado do servidor, 
+	identificando cada um dos componentes introduzido e elucidando o seu papel.
+	
+	Explique que vantagens apresenta esta variante e em que consiste o problema da consistência da informação. (Teste1_2016)
+	
+-------------------------------
+-------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	Take message passing as the communication paradigm which was chosen to establish a client-server model among processes residing in different nodes 
+	of a distributed system and consider that it was used the TCP protocol for its implementation. Draw a diagram that describes the functional interaction among 
+	the components of such a model, both at client and at the server side, identifying each of them and explaining their role in the interaction. Assume the server replication variant.
+	
+	Refer in this context to what one means by message marshaling and unmarshaling. How are they enforced in Java ? (Teste1_2015)
+	
+-------------------------------
+-------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	Considere a troca de mensagens como o paradigma de comunicação que foi escolhido para se estabelecer um modelo cliente-servidor entre 
+	processos residentes nos diferentes nós de processamento de um sistema distribuído e admita a replicação do servidor (serviço em concorrência de 
+	clientes distintos) e que foram usados na sua implementação os Java sockets.
+	
+	Face a este enquadramento, responda justificadamente às questões seguintes:
+	
+		i.  Apresente um diagrama esquemático que descreva a interacção funcional entre os diferentes componentes de um tal sistema no lado do servidor, 
+			identificando cada um dos componentes introduzido.
+			
+		ii. O mecanismo de replicação do servidor não pode ser instanciado indefenidamente. Fatores limitativos determinantes são os resursos do 
+			sistema computacional onde o servidor está instalado. Identifique dois deles e explique qual é o seu impacto.  
+			
+		(Teste1_2012)
+		
+-------------------------------
+-------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	Descreva as operações principais que têm que ser efectuadas para comunicação, na perspectiva do programador, na implementação de um modelo 
+	cliente­servidor, com replicação do servidor, usando o protocolo TCP, quer do lado do servidor, quer do lado do cliente.  (Teste1_2008)
+	
+-------------------------------
+-------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	What distinguishes the client-server model from peer-to-peer communications? Give an example of each and explain how relevant they are in the
+	examples you have presented ? (Teste1_2023)
+	
+		SAIU NO MEU 
+		
+		Comunicacoes Peer-To-Peer:
+			
+				-- Peer-to-peer (P2P) communications refer to a decentralized form of network communication where participants or nodes in the network can directly 
+					interact with each other without relying on a central server or authority. In a P2P communication model, each node can act both as a client and a server, 
+					sharing and requesting resources or services directly with other nodes in the network.
+			
+				-- Cada par (chamado de "Peer") tem exatamente a mesma informação e, portanto, o mesmo serviço em vários sistemas computacionais.
+				-- O recurso partilhado é duplicado em cada par, havendo múltiplas cópias.
+				
+				-- Máximiza a disponibilidade do serviço e minimiza o tempo de resposta, logo potência a escalabilidade.
+				-- O serviço é mantido operarional mesmo se alguns pares falharem.
+				
+			Exemplo:  file-sharing application 
+			
+	
+	
+	

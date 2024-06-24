@@ -1,0 +1,139 @@
+PC1:
+ip 192.168.0.40/24 192.168.0.1
+
+
+PC2: 
+ip 192.168.0.45/24 192.168.0.1
+
+PC3:
+ip 10.0.2.100/24 10.0.2.2/24
+
+R1
+:::::::::::::::::::::::::::::::::::::::::::::::
+conf t
+interface f0/0
+ip address 11.11.0.1 255.255.255.0
+no shutdown
+interface f0/1
+ip address 192.168.0.1 255.255.255.0
+no shutdown
+end
+write
+
+conf t
+ crypto isakmp policy 30
+ authentication pre-share
+ crypto isakmp key labcom address 11.11.0.2 
+ crypto ipsec transform-set authT ah-sha-hmac
+ crypto ipsec transform-set cipherT esp-des
+ crypto ipsec transform-set auth_ciphT ah-sha-hmac esp-des
+ crypto ipsec profile ARipsec
+ set transform-set authT cipherT auth_ciphT
+
+end 
+write
+
+
+
+conf t
+interface Tunnel 0 
+ip unnumbered FastEthernet0/0 
+tunnel source 11.11.0.1
+tunnel destination 11.11.0.2
+tunnel mode ipsec ipv4 
+tunnel protection ipsec profile ARipsec
+ip route 10.0.2.0 255.255.255.0 Tunnel 0
+no shut
+end
+write
+
+
+R2
+:::::::::::::::::::::::::::::::::::::::::::::::::
+conf t
+interface f0/0
+ip address 11.11.0.2 255.255.255.0
+no shutdown
+interface f0/1
+ip address 10.0.2.2 255.255.255.0
+no shutdown
+end
+write
+
+conf t
+ crypto isakmp policy 30
+ authentication pre-share
+ crypto isakmp key labcom address 11.11.0.1 
+ crypto ipsec transform-set authT ah-sha-hmac
+ crypto ipsec transform-set cipherT esp-des
+ crypto ipsec transform-set auth_ciphT ah-sha-hmac esp-des
+ crypto ipsec profile ARipsec
+ set transform-set authT cipherT auth_ciphT
+
+end 
+write
+
+conf t
+interface Tunnel 0 
+ip unnumbered FastEthernet0/0 
+tunnel source 11.11.0.2 
+tunnel destination 11.11.0.1 
+tunnel mode ipsec ipv4 
+tunnel protection ipsec profile ARipsec
+ip route 192.168.0.45 255.255.255.255 Tunnel 0 
+ip route 192.168.0.0 255.255.255.0 11.11.0.1
+end 
+write
+
+conf t
+interface Tunnel0 
+shutdown
+
+
+R3
+::::::::::::::::::::::::::::::::::::::::::::
+conf t
+interface f0/0
+ip address 11.11.0.3 255.255.255.0
+no shutdown
+interface f0/1
+ip address 10.0.3.3 255.255.255.0
+no shutdown
+end
+write
+
+nss-ios-ca:
+conf t
+interface f0/0
+ip address 192.168.0.201 255.255.255.0
+no shutdown
+end
+write
+
+conf t
+hostname nss-ios-ca
+ip http server
+crypto key generate rsa general-keys label nss-ios-ca modulus 1024 exportable
+crypto key export rsa nss-ios-ca pem url nvram: 3des labcomlabcom
+crypto pki server nss-ios-ca
+database level names 
+issuer-name CN = nss-ios-ca, O = University of Aveiro 
+lifetime crl 24 
+lifetime certificate 365 
+lifetime ca-certificate 750
+no shutdown
+
+
+
+
+
+Ambos R1 E R2:
+show crypto isakmp policy
+show crypto ipsec transform-set
+show crypto maP
+
+
+
+
+
+

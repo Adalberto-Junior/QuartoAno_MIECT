@@ -1,0 +1,2 @@
+set pcname Admin
+ip 10.3.3.5 10.3.3.10 24

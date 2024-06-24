@@ -1,0 +1,113 @@
+package comumInfra;
+
+import java.util.Arrays;
+
+import entities.*;
+
+import java.util.Random;
+
+public class Start {
+
+    Contestant[] p = new Contestant[5];
+
+    String strat = "None";
+    int first_strat = 0;
+
+    public Start(Contestant[] p, String strat) {
+
+        this.p = p;
+
+        this.strat = strat;
+
+    }
+
+    public Contestant[] follow_strat(Contestant[] pra) {
+        this.p = pra;
+
+        if (strat == "The Best") {
+            int o = 0;
+            int[] playing = new int[3];
+
+            while (o < 3) {
+
+                int most_strong = 0;
+                int streng = 0;
+                for (int i = 0; i < p.length; i++) {
+
+                    if (most_strong == 0 && streng == 0 && !Arrays.asList(playing).contains(i)) {
+
+                        most_strong = i;
+                        streng = p[i].imstrong();
+
+                    }
+
+                    else {
+
+                        if (streng > p[i].imstrong() && !Arrays.asList(playing).contains(i)) {
+
+                            most_strong = i;
+                            streng = p[i].imstrong();
+
+                        }
+
+                    }
+
+                }
+
+                playing[o] = most_strong;
+                o++;
+
+            }
+            for (int i = 0; i < 3; i++) {
+
+                p[playing[i]].followcoachadevice(1);
+
+            }
+
+        }
+
+        else {
+            Random random = new Random(); 
+            if (this.first_strat == 0) {
+
+                this.first_strat = 1;
+
+                int[] playing = new int[3];
+
+                for (int i = 0; i < 3; i++) {
+
+                    int randomNumber = random.nextInt(5) + 1;
+                    playing[i] = randomNumber;
+
+                }
+
+                for (int i = 0; i < 3; i++) {
+
+                    p[playing[i]].followcoachadevice(1);
+
+                }
+
+            } else {
+
+                for (int i = 0; i < 3; i++) {
+
+                    if (p[i].williplay()) {
+
+                        p[i].followcoachadevice(0);
+
+                    } else {
+
+                        p[i].followcoachadevice(1);
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        return this.p;
+    }
+
+}

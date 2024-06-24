@@ -1,0 +1,18 @@
+g
+  cd /etc/openvpn
+  cp -r /usr/share/easy-rsa .
+  cd easy-rsa
+  ./easyrsa init-pki
+  ./easyrsa build-ca
+  ./easyrsa build-server-full server
+  ./easyrsa build-client-full client1 
+  ./easyrsa gen-dh
+  cd ../server
+  cp ../easy-rsa/pki/ca.crt .
+  cp ../easy-rsa/pki/dh.pem .
+  cp ../easy-rsa/pki/issued/server.crt .
+  cp ../easy-rsa/pki/private/server.key .
+  cp ../easy-rsa/pki/issued/client1.crt /home/labcom/
+  cp ../easy-rsa/pki/private/client1.key /home/labcom/
+  cp ../easy-rsa/pki/ca.crt /home/labcom/
+  chown labcom:labcom /home/labcom/*

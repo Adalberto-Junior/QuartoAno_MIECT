@@ -1,0 +1,31 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Adalb\Desktop\QuartoAno\ASE\projeto\sd_card\sdspi\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.2_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 C:/Users/Adalb/Desktop/QuartoAno/ASE/projeto/sd_card/sdspi/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5170 bytes. 0x2e90 bytes (36%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/sd_card_example_main.c.obj
+C:/Users/Adalb/Desktop/QuartoAno/ASE/projeto/sd_card/sdspi/main/sd_card_example_main.c: In function 'app_main':
+C:/Users/Adalb/Desktop/QuartoAno/ASE/projeto/sd_card/sdspi/main/sd_card_example_main.c:79:40: warning: passing argument 5 of 'config_init' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   79 |     ret = config_init(MOSI,MISO,CLK,CS,mount_point,&card,host);
+      |                                        ^~~~~~~~~~~
+In file included from C:/Users/Adalb/Desktop/QuartoAno/ASE/projeto/sd_card/sdspi/main/sd_card_example_main.c:16:
+C:/Users/Adalb/Desktop/QuartoAno/ASE/projeto/sd_card/sdspi/main/sd_card.h:10:96: note: expected 'char *' but argument is of type 'const char *'
+   10 | esp_err_t config_init(int PIN_NUM_MOSI, int PIN_NUM_MISO, int PIN_NUM_CLK,int PIN_NUM_CS, char mount_point[], sdmmc_card_t *card, sdmmc_host_t host);
+      |                                                                                           ~~~~~^~~~~~~~~~~~~
+C:/Users/Adalb/Desktop/QuartoAno/ASE/projeto/sd_card/sdspi/main/sd_card_example_main.c:79:52: warning: passing argument 6 of 'config_init' from incompatible pointer type [-Wincompatible-pointer-types]
+   79 |     ret = config_init(MOSI,MISO,CLK,CS,mount_point,&card,host);
+      |                                                    ^~~~~
+      |                                                    |
+      |                                                    sdmmc_card_t **
+C:/Users/Adalb/Desktop/QuartoAno/ASE/projeto/sd_card/sdspi/main/sd_card.h:10:125: note: expected 'sdmmc_card_t *' but argument is of type 'sdmmc_card_t **'
+   10 | esp_err_t config_init(int PIN_NUM_MOSI, int PIN_NUM_MISO, int PIN_NUM_CLK,int PIN_NUM_CS, char mount_point[], sdmmc_card_t *card, sdmmc_host_t host);
+      |                                                                                                               ~~~~~~~~~~~~~~^~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable sd_card.elf
+FAILED: sd_card.elf 
+cmd.exe /C "cd . && C:\Espressif\tools\riscv32-esp-elf\esp-13.2.0_20230928\riscv32-esp-elf\bin\riscv32-esp-elf-g++.exe -march=rv32imc_zicsr_zifencei -nostartfiles -march=rv32imc_zicsr_zifencei --specs=nosys.specs    -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32C3=0 -Wl,--Map=C:/Users/Adalb/Desktop/QuartoAno/ASE/projeto/sd_card/sdspi/build/sd_card.map -Wl,--no-warn-rwx-segments -fno-rtti -fno-lto -Wl,--gc-sections -Wl,--warn-common -T esp32c3.peripherals.ld -T esp32c3.rom.ld -T esp32c3.rom.api.ld -T esp32c3.rom.libgcc.ld -T esp32c3.rom.newlib.ld -T esp32c3.rom.version.ld -T esp32c3.rom.eco3.ld -T memory.ld -T sections.ld @CMakeFiles\sd_card.elf.rsp -o sd_card.elf  && cd ."
+C:/Espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(sd_card_example_main.c.obj): in function `app_main':
+C:/Users/Adalb/Desktop/QuartoAno/ASE/projeto/sd_card/sdspi/main/sd_card_example_main.c:79:(.text.app_main+0x92): undefined reference to `config_init'
+C:/Espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld.exe: C:/Users/Adalb/Desktop/QuartoAno/ASE/projeto/sd_card/sdspi/main/sd_card_example_main.c:202:(.text.app_main+0xe4): undefined reference to `s_example_write_file'
+C:/Espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld.exe: C:/Users/Adalb/Desktop/QuartoAno/ASE/projeto/sd_card/sdspi/main/sd_card_example_main.c:208:(.text.app_main+0xfc): undefined reference to `s_example_read_file'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

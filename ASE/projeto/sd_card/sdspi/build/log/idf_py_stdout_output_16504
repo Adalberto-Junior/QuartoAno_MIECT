@@ -1,0 +1,87 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.2-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jun  2 2024 14:09:53[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (38) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (86) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=0e908h ( 59656) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001e930 vaddr=3fc8da00 size=01678h (  5752) load[0m
+[0;32mI (110) esp_image: segment 2: paddr=0001ffb0 vaddr=40380000 size=00068h (   104) load[0m
+[0;32mI (116) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=2b958h (178520) map[0m
+[0;32mI (152) esp_image: segment 4: paddr=0004b980 vaddr=40380068 size=0d848h ( 55368) load[0m
+[0;32mI (167) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (167) boot: Disabling RNG early entropy source...[0m
+[0;32mI (178) cpu_start: Unicore app[0m
+[0;32mI (187) cpu_start: Pro cpu start user code[0m
+[0;32mI (187) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (187) cpu_start: Application information:[0m
+[0;32mI (190) cpu_start: Project name:     sd_card[0m
+[0;32mI (195) cpu_start: App version:      1[0m
+[0;32mI (199) cpu_start: Compile time:     Jun  2 2024 14:12:14[0m
+[0;32mI (206) cpu_start: ELF file SHA256:  6e22d7297...[0m
+[0;32mI (211) cpu_start: ESP-IDF:          v5.2-dirty[0m
+[0;32mI (216) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (221) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (226) cpu_start: Chip rev:         v0.3[0m
+[0;32mI (230) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (238) heap_init: At 3FC90090 len 0002FF70 (191 KiB): RAM[0m
+[0;32mI (244) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (251) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (258) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (269) spi_flash: flash io: dio[0m
+[0;33mW (273) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (286) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (292) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (300) main_task: Calling app_main()[0m
+[0;32mI (300) example: Initializing SD card[0m
+[0;32mI (310) example: Using SPI peripheral[0m
+[0;32mI (310) example: Mounting filesystem[0m
+[0;32mI (320) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (330) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (370) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;33mW (380) vfs_fat_sdmmc: failed to mount card (13)[0m
+[0;33mW (380) vfs_fat_sdmmc: partitioning card[0m
+[0;33mW (390) vfs_fat_sdmmc: formatting card, allocation unit size=16384[0m
+[0;33mW (8680) vfs_fat_sdmmc: mounting again[0m
+[0;32mI (8680) example: Filesystem mounted[0m
+Name: 00000
+Type: SDHC/SDXC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 30474MB
+CSD: ver=2, sector_size=512, capacity=62410752 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (8690) example: Opening file /sdcard/hello.txt[0m
+[0;32mI (8710) example: File written[0m
+[0;32mI (8710) example: Renaming file /sdcard/hello.txt to /sdcard/foo.txt[0m
+[0;32mI (8710) example: Reading file /sdcard/foo.txt[0m
+[0;32mI (8710) example: Read from file: 'Hello 00000!'[0m
+[0;32mI (8720) vfs_fat_sdmmc: Formatting card, allocation unit size=16384[0m
+[0;32mI (17080) example: file doesnt exist, format done[0m
+[0;32mI (17080) example: Opening file /sdcard/nihao.txt[0m
+[0;32mI (17090) example: File written[0m
+[0;32mI (17090) example: Reading file /sdcard/nihao.txt[0m
+[0;32mI (17090) example: Read from file: 'Nihao 00000!'[0m
+[0;32mI (17090) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (17100) example: Card unmounted[0m
+[0;32mI (17110) gpio: GPIO[7]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (17120) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (17130) gpio: GPIO[6]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (17140) main_task: Returned from app_main()[0m

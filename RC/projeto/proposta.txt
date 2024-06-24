@@ -1,0 +1,18 @@
+Título: 
+Acelerador para Operação de Multiplicação e Acumulação com Deslocamento de Bits através de um Co-Processador de Hardware
+
+Descrição da funcionalidade:
+Sistema com um acelerador de hardware para realizar operação que envolve a combinação de multiplicação, soma e deslocamento, entre dois vetores de 32 bits e um parâmetro de deslocamento de 32 bits.
+
+Descrição da arquitetura:
+- O sistema irá incluir hardware customizado para a execução da operação.
+- O módulo irá interagir com o MicroBlaze através de uma interface AXI-Stream.
+
+Motivação:
+Essa operação é muito comum em algoritmos de convolução usados em processamento de imagens, deep learning e filtragem de sinais. Hardware pode realizar várias operações em paralelo, aumentando significativamente a velocidade em comparação com uma implementação puramente em software.
+
+Metodologia:
+- Os vetores de entrada e o parâmetro de deslocamento serão gerados aleatóriamente.
+- Os resultados serão checados por software.
+- Implementação de um Testbench para o acelerador
+- Interação do utilizador através de UARTLite e um terminal serial.

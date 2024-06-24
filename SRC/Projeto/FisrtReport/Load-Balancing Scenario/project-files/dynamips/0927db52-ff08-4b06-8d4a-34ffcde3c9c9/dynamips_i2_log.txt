@@ -1,0 +1,28 @@
+Apr 26 20:47:32.013 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Apr 26 20:47:32.015 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63712.
+Apr 26 20:47:32.508 HYPERVISOR: exec_cmd: hypervisor version 
+Apr 26 20:47:32.509 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Adalb\Desktop\QuartoAno\SRC\Projeto\FisrtReport\Load-Balancing Scenario\project-files\dynamips 
+Apr 26 20:47:32.510 GENERAL: working_dir=C:\Users\Adalb\Desktop\QuartoAno\SRC\Projeto\FisrtReport\Load-Balancing Scenario\project-files\dynamips
+Apr 26 20:47:32.510 HYPERVISOR: exec_cmd: ethsw create Switch1 
+Apr 26 20:47:35.669 HYPERVISOR: exec_cmd: nio create_udp udp-cb14057c-316e-4514-a84e-3f6283985b45 20009 127.0.0.1 20008 
+Apr 26 20:47:35.669 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-cb14057c-316e-4514-a84e-3f6283985b45 
+Apr 26 20:47:35.685 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-cb14057c-316e-4514-a84e-3f6283985b45 1 
+Apr 26 20:47:35.724 HYPERVISOR: exec_cmd: nio create_udp udp-40c48b8a-583a-4e4f-ab2e-576b74ac650f 20012 127.0.0.1 20013 
+Apr 26 20:47:35.724 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-40c48b8a-583a-4e4f-ab2e-576b74ac650f 
+Apr 26 20:47:35.726 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-40c48b8a-583a-4e4f-ab2e-576b74ac650f 1 
+Apr 26 20:47:35.806 HYPERVISOR: exec_cmd: nio create_udp udp-e861722c-bae5-4f7f-8a84-d1054cf4db6e 20014 127.0.0.1 20015 
+Apr 26 20:47:35.806 HYPERVISOR: exec_cmd: ethsw add_nio Switch1 udp-e861722c-bae5-4f7f-8a84-d1054cf4db6e 
+Apr 26 20:47:35.810 HYPERVISOR: exec_cmd: ethsw set_access_port Switch1 udp-e861722c-bae5-4f7f-8a84-d1054cf4db6e 1 
+Apr 26 22:57:12.375 HYPERVISOR: exec_cmd: nio bind_filter udp-cb14057c-316e-4514-a84e-3f6283985b45 2 capture 
+Apr 26 22:57:12.378 HYPERVISOR: exec_cmd: nio setup_filter udp-cb14057c-316e-4514-a84e-3f6283985b45 2 en10mb C:\Users\Adalb\Desktop\QuartoAno\SRC\Projeto\FisrtReport\Load-Balancing Scenario\project-files\captures\R1_FastEthernet00_to_Switch1_Ethernet0.pcap 
+Apr 26 22:57:48.338 HYPERVISOR: exec_cmd: nio bind_filter udp-e861722c-bae5-4f7f-8a84-d1054cf4db6e 2 capture 
+Apr 26 22:57:48.338 HYPERVISOR: exec_cmd: nio setup_filter udp-e861722c-bae5-4f7f-8a84-d1054cf4db6e 2 en10mb C:\Users\Adalb\Desktop\QuartoAno\SRC\Projeto\FisrtReport\Load-Balancing Scenario\project-files\captures\Switch1_Ethernet2_to_LB1B_eth0.pcap 
+Apr 26 22:57:55.986 HYPERVISOR: exec_cmd: nio bind_filter udp-40c48b8a-583a-4e4f-ab2e-576b74ac650f 2 capture 
+Apr 26 22:57:55.987 HYPERVISOR: exec_cmd: nio setup_filter udp-40c48b8a-583a-4e4f-ab2e-576b74ac650f 2 en10mb C:\Users\Adalb\Desktop\QuartoAno\SRC\Projeto\FisrtReport\Load-Balancing Scenario\project-files\captures\Switch1_Ethernet1_to_LB1A_eth0.pcap 
+Apr 26 22:58:16.056 HYPERVISOR: exec_cmd: nio unbind_filter udp-e861722c-bae5-4f7f-8a84-d1054cf4db6e 2 
+Apr 27 01:35:33.109 HYPERVISOR: exec_cmd: nio unbind_filter udp-cb14057c-316e-4514-a84e-3f6283985b45 2 
+Apr 27 01:37:08.979 HYPERVISOR: exec_cmd: nio unbind_filter udp-40c48b8a-583a-4e4f-ab2e-576b74ac650f 2 
+Apr 27 01:59:58.404 HYPERVISOR: exec_cmd: ethsw delete Switch1 
+Apr 27 01:59:58.488 HYPERVISOR: exec_cmd: hypervisor stop 
+Apr 27 01:59:58.863 HYPERVISOR: Stopped.
+Apr 27 01:59:58.864 GENERAL: reset done.

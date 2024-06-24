@@ -1,0 +1,13 @@
+Como chegaram na solução do campo de benfica?
+Qual é a limitação desta solução?
+É possivel fazer melhor?
+
+Lua;
+GO;
+REACT
+REDG 
+NATS
+API KONG
+GRAFANA
+OPENTELEMETY
+

@@ -1,0 +1,224 @@
+
+	-----------------------------------------------------------------
+						Parte A - Pergunta 1
+	-----------------------------------------------------------------
+	
+	
+	The diagram bellow aims to depict in a hierarchical way the difference layers of software/hardware modules required to run a distributed application  
+	in a parallel machine based on off-the-shelf computer systems.
+	
+	What is the role played by the middleware layer in this context ? 
+	Explain why the Java Virtual Machine (JVM) may be thought of as part of the middleware. 	(Teste1_2022)
+		
+-------------------------------------
+-------------------------------------
+
+		A camada middleware pode ser entendida como uma camada de software, isto é, uma camada abstrata que se localiza entre a aplicação, o 
+		hardware e o sistema operativo de um sistema computacional. Desta forma, o middleware serve como uma camada de compatibilidade entre
+		os diferentes sistemas no sentido de assegurar portabilidade, compatibilidade e segurança entre eles.
+		// Desta forma, o middleware permite ocultar toda a heterogeneidade subjacente das aplicações escondendo do programador os protocolos e
+		procedimentos entre a aplicação e o hardware do sistema.
+		
+		JVM atua como uma camada intermediária entre a aplicação Java e a camada de hardware subjacente, o que faz com que as aplicações Java 
+		sejam totalmente independentes da plaraforma de hardware e do sistema operativo onde são executadas. E, assim, as aplicações java escritas uma 
+        vez podem ser executadas em qualquer sistema compatível com o JVM. E por isso, o JVM é visto como como um tipo de middleware.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	The diagram bellow describes the main components of the Java Virtual Machine (JVM).
+	
+	Define middleware and explain why the Java Virtual Machine (JVM) can be considered part of the middleware. Present clearly your claims.  (Teste1_2018)
+	
+-------------------------------------
+-------------------------------------
+
+		A camada middleware pode ser entendida como uma camada de software, isto é, uma camada abstrata que se localiza entre a aplicação, o 
+		hardware e o sistema operativo de um sistema computacional. Desta forma, o middleware serve como uma camada de compatibilidade entre
+		os diferentes sistemas no sentido de assegurar portabilidade, compatibilidade e segurança entre eles.
+		// Desta forma, o middleware permite ocultar toda a heterogeneidade subjacente das aplicações escondendo do programador os protocolos e
+		procedimentos entre a aplicação e o hardware do sistema.
+
+		JVM atua como uma camada intermediária entre a aplicação Java e a camada de hardware subjacente, o que faz com que as aplicações Java 
+		sejam totalmente independentes da plaraforma de hardware e do sistema operativo onde são executadas. E, assim, as aplicações java escritas uma 
+        vez podem ser executadas em qualquer sistema compatível com o JVM. E por isso, o JVM é visto como como um tipo de middleware.
+	
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	What is meant by transparency in the context of distributed systems? Give examples, at least five, of the models transparency may assume. 
+	Justify clearly your claims. ( Teste2_2018 ) 
+	
+-------------------------------------
+-------------------------------------
+
+		A transparencia num sistema distribuído é a habilidade de esconder a complexidade do sistema dos utilizadores e/ou dos programadores das
+		aplicacoes. O seu objetivo é fazer com que o sistema distribuído pareça único e unificado para os utilizadores apesar da sua arquitetura distribuida 
+		subjacente.
+
+		Transparência de Acesso:
+			-  Quando as mesmas operações são realizadas para aceder a recursos tanto locais como remotos.
+			
+				Exemplo Java:   Remote Method Invocation (RMI)
+											In this example, the client program wants to invoke the add method on the Calculator object, which resides on the server 
+											program running on Machine A. 
+											By using RMI, the client can call the remote method add as if it were a local method call, without explicitly dealing with the 
+											network communication and location of the server object.
+											The access transparency provided by RMI allows the client program to interact with the remote object as if it were a local object, 
+											abstracting away the distributed nature of the system.
+			
+		Transparência de Posição:
+			-  Quando o acesso ao recurso é realizado sem conhecimento preciso da sua localização física ou de rede.
+			
+				Exemplo Java:   Remote Method Invocation (RMI)
+											In this example, the client program uses RMI to access a remote service. 
+											The client retrieves the RMI registry (which acts as a naming service) using LocateRegistry.getRegistry, specifying the IP address of the machine where the server is running. 
+											Then, it performs a lookup of the remote service by its logical name ("RemoteService") using registry.lookup.
+											The client does not need to know the specific server's IP address or physical location in advance. 
+											It uses the location transparency provided by RMI and the RMI registry to dynamically locate and invoke methods on the remote service.
+											The RMI framework handles the details of locating the server object, establishing the network connection, and marshaling/unmarshaling the method parameters and return values. 
+											This abstraction allows the client to interact with the remote service as if it were a local object, regardless of the server's location.
+			
+		Transparência de Rede: 
+			-	Quando a transparência de acesso e posição existem em simultâneo.
+			
+				With network transparency, users and applications can interact with the distributed system without needing to be aware of the complexities of network communication. 
+				The system handles the details of sending messages, routing, addressing, and ensuring reliable delivery behind the scenes.
+				
+		
+		Transparência de mobilidade:
+			-	Quando a localização de acesso do cliente aos recursos pode mudar dentro do sistema sem afetar a 
+				operação que está a ser executada.
+			
+		Transparência de migração:
+			-  Quando os recursos  podem ser transferidos sem afetar o seu acesso.
+			
+		Transparência de concorrência:
+			- 	Quando o acesso a recursos partilhados é realizado em paralelo por múltiplas entidades sem terem conhecimento umas das outras 
+				(A informação tem de se manter sempre consistente)
+			
+		Transparência de falha:
+			-  Quando falhas, que ocorrem nos componentes de sistemas de hardware e software, podem ser disfraçadas e, por conseguinte, 
+				as tarefas em execução podem ser terminadas.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	Tanenbaum defines distributed systems as a collection of independent computers that appears to its users as a single coherent system. 
+	Using this definition as the starting point, try to elicit some of the distinctive features that this kind of systems present, namely communication through 
+	message passing, failure handling and global internal state. (Teste1_2017)
+	
+-------------------------------------		SAIU NO MEU
+-------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	O que se entende por camada de middleware? Faça um diagrama ilustrativo que sinalize a presença da camada para o caso de uma máquina paralela 
+	de acoplamento solto, formada por três nós de processamento, que executa uma aplicação distribuída. Explique porque é que a máquina virtual de
+	Java (JVM) pode ser considerada um componente do middleware. (Teste1_2016)
+	
+-------------------------------------
+-------------------------------------
+
+		A camada middleware pode ser entendida como uma camada de software, isto é, uma camada abstrata que se localiza entre a aplicação, o 
+		hardware e o sistema operativo de um sistema computacional. Desta forma, o middleware serve como uma camada de compatibilidade entre
+		os diferentes sistemas no sentido de assegurar portabilidade, compatibilidade e segurança entre eles.
+		// Desta forma, o middleware permite ocultar toda a heterogeneidade subjacente das aplicações escondendo do programador os protocolos e
+		procedimentos entre a aplicação e o hardware do sistema.
+		
+		JVM atua como uma camada intermediária entre a aplicação Java e a camada de hardware subjacente, o que faz com que as aplicações Java 
+		sejam totalmente independentes da plaraforma de hardware e do sistema operativo onde são executadas. E, assim, as aplicações java escritas uma 
+        vez podem ser executadas em qualquer sistema compatível com o JVM. E por isso, o JVM é visto como como um tipo de middleware.
+
+	(Ver desenho power point -  Introductory Concepts (4))
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	Explique qual é a importância de se garantir a tolerância a falhas no âmbito dos sistemas distribuídos e indique quais são as estratégias
+	mais comuns usadas no tratamento das falhas. Dê um exemplo de cada uma delas. (Teste1_2015)
+	
+-------------------------------------
+-------------------------------------
+
+		Nota: A tolerância de falhas é um das 3 estratégias básicas para a gestão das falhas. 
+				 3 estratégias: Mascarar as falhas; Recuperação das falhas; Tolerância de falhas.
+				 
+				 
+		Assegurar a tolerância a falhas é crucial num sistema distribuido para manter a disponibilidade, confiança e resistência do sistema
+		no caso de falhas ou erros. Assim, a tolerância a falhas tem como objetivo prevenir o impacto das falhas, permitindo ao sistema 
+		continuar a operar e a fornecer serviços mesmo quando componentes ou nós do sistema falhem.
+		
+		Estratégias + usadas e exemplos:
+		
+			- Redundância e Replicação : 	Creação de componentes ou dados duplicados ou redundantes para garantir disponibilidade e resiliência.
+																	If a component or node fails, another redundant component can take over the tasks seamlessly (sem problemas/falhas). 
+																	Example: Duplicação da base de dados ao longo de múltiplos nós para assegurar disponibilidade dos dados e
+																						tolerância de falhas.
+								
+			
+			- Deteção de Erros e Monitorização :   This strategy involves monitoring system components and network communications to detect and identify errors or failures. 
+																				Various techniques such as heartbeat monitoring, timeouts, or checksums can be used to identify faults. 
+																				Example: Using heartbeat messages to detect the failure of a node in a cluster.
+			
+	
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	Foi referido que a motivação principal para a construção e utilização de sistemas distribuidos é a partilha de recursos. Esta partilha
+	manifestando-se principalmente na paralelização de operações e na disponibilização de serviços. Apresente exemplos, um de cada tipo, 
+	que justifiquem a afirmação anterior. (Teste1_2012)
+	
+-------------------------------------
+-------------------------------------
+
+	Paralelização de operações: tirando vantagem de multiplos processadores e outros componentes de hardware de sistemas 
+														computacionais paralelizáveis, um tentar garantir a execução de um programa mais rápido e eficiente.
+													
+													Example: Image Processing - Imagine you have a large set of images that need to be processed, such as resizing, cropping, or applying filters. 
+																	In a distributed system, you can distribute the images across multiple nodes, and each node can independently process a subset of the images simultaneously. 
+																	By parallelizing the image processing tasks, the overall processing time is significantly reduced, allowing for faster completion of the operation.
+																	
+	Disponibilização de serviços: 
+							
+													Example: File Sharing Network - Consider a peer-to-peer (P2P) file sharing network where users share files with each other. In this network, 
+																	each user's computer acts as both a client and a server. When a user wants to download a file, they connect to other users in the network and download the file directly from them.
+
+																	The motivation for using a distributed system and providing services in this case is to enable efficient file sharing and reduce the burden on centralized servers. 
+																	By leveraging the resources of individual users' computers, files can be distributed across the network, allowing users to download files directly from other peers. 
+																	This not only speeds up the download process but also reduces the load on any single server, promoting decentralized and collaborative file sharing.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	Explique o que entende por sistema distribuído. Dê dois exemplos da sua aplicação sobre plataformas hardware com caracteristicas distintas.
+	Qual é a motivação da sua construção em cada um dos casos ? (Teste1_2007)
+	
+-------------------------------------
+-------------------------------------
+
+		Sistema Distribuido é uma coleção de computadores/nós interligados que trabalham em conjunto para um objetivo em comum. Num sistema
+		distribuido, os nós comunicam e coordenam as suas ações para fornecer um serviço unificado e para executar uma aplicação distribuida.
+		The primary characteristic of a distributed system is that the nodes are physically separate and may be geographically dispersed.
+		
+		Examplos: 
+		
+		-- Computação Cluster 
+		
+			A cluster computing system consists of a group of interconnected computers (nodes) that work together as a single computing resource. 
+			Each node in the cluster contributes its processing power, memory, and storage to perform parallel computing tasks. Cluster computing is commonly used in 
+			scientific research, data analysis, and high-performance computing applications.
+			
+	
+		-- Internet of Things (IoT) Infrastructure
+		
+			The Internet of Things (IoT) involves connecting and integrating various physical devices (sensors, actuators, smart devices) through a network to collect and exchange data. 
+			IoT infrastructure relies on a distributed system architecture to manage the large-scale deployment of devices and handle the data processing and communication challenges.
+			
+			Example: Smart City Applications - In a smart city, numerous IoT devices are deployed throughout the urban environment to monitor and control various aspects, such as traffic 
+							flow, waste management, energy consumption, and public safety. These devices collect real-time data that needs to be processed, analyzed, and shared across different 
+							components of the smart city infrastructure.
+
+			Motivation: The motivation for building a distributed system in this case is to handle the vast number of IoT devices distributed throughout the city and manage the data generated by 
+								these devices efficiently. By distributing the data processing and communication tasks across multiple nodes, the system can handle the scalability, real-time requirements, 
+								and reliability needed for smart city applications.
+	
+		
+

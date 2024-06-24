@@ -1,0 +1,34 @@
+import paramiko
+
+def block_ip_via_ssh(ip_address, firewall_ip, firewall_username, firewall_password):
+    """
+    Blocks an IP address on the firewall using SSH.
+    :param ip_address: The attacker's IP address to block.
+    :param firewall_ip: IP address of the firewall.
+    :param firewall_username: SSH username for the firewall.
+    :param firewall_password: SSH password for the firewall.
+    """
+    try:
+        # Establish an SSH connection to the firewall
+        ssh_client = paramiko.SSHClient()
+        ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+        ssh_client.connect(firewall_ip, username=firewall_username, password=firewall_password)
+
+        # Execute the command to block the IP address
+        block_command = f"iptables -A INPUT -s {ip_address} -j DROP"
+        ssh_client.exec_command(block_command)
+
+        print(f"Blocked IP address {ip_address} successfully.")
+    except Exception as e:
+        print(f"Error blocking IP address {ip_address}: {str(e)}")
+    finally:
+        ssh_client.close()
+
+# Example usage
+if __name__ == "__main__":
+    attacker_ip = "123.456.789.10"  # Replace with the actual attacker's IP address
+    firewall_ip = "your_firewall_ip"
+    firewall_username = "your_ssh_username"
+    firewall_password = "your_ssh_password"
+
+    block_ip_via_ssh(attacker_ip, firewall_ip, firewall_username, firewall_password)

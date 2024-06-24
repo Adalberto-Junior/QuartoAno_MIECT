@@ -1,0 +1,6 @@
+https://c3.espressif.com/
+https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/get-started/index.html#
+https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/hw-reference/esp32c3/user-guide-devkitm-1.html
+https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/api-reference/index.html
+https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/hw-reference/index.html
+https://docs.espressif.com/projects/esp-idf/en/stable/esp32c3/api-guides/index.html

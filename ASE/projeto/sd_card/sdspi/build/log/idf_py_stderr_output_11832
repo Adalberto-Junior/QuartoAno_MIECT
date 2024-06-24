@@ -1,0 +1,113 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33mStack dump detected[0m
+[0;33m0x403806d0: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/panic.c:472
+0x40384f2e: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Adalb\\Desktop\\QuartoAno\\ASE\\projeto\\sd_card\\sdspi\\build\\sd_card.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmps32sd7ux"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmps32sd7ux': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x403806d0: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/panic.c:472
+0x40384f2e: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Adalb\\Desktop\\QuartoAno\\ASE\\projeto\\sd_card\\sdspi\\build\\sd_card.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmpxbmy13ye"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmpxbmy13ye': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x403806d0: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/panic.c:472
+0x40384f2e: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Adalb\\Desktop\\QuartoAno\\ASE\\projeto\\sd_card\\sdspi\\build\\sd_card.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmpmtoin5kg"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmpmtoin5kg': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x403806d0: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/panic.c:472
+0x40384f2e: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Adalb\\Desktop\\QuartoAno\\ASE\\projeto\\sd_card\\sdspi\\build\\sd_card.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmprp8638jd"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmprp8638jd': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x403806d0: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/panic.c:472
+0x40384f2e: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Adalb\\Desktop\\QuartoAno\\ASE\\projeto\\sd_card\\sdspi\\build\\sd_card.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmpvhjrqsz6"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmpvhjrqsz6': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x403806d0: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/panic.c:472
+0x40384f2e: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Adalb\\Desktop\\QuartoAno\\ASE\\projeto\\sd_card\\sdspi\\build\\sd_card.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmp4igmntxo"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmp4igmntxo': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x403806d0: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/panic.c:472
+0x40384f2e: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Adalb\\Desktop\\QuartoAno\\ASE\\projeto\\sd_card\\sdspi\\build\\sd_card.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmp8ngog5yt"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmp8ngog5yt': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x403806d0: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/panic.c:472
+0x40384f2e: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Adalb\\Desktop\\QuartoAno\\ASE\\projeto\\sd_card\\sdspi\\build\\sd_card.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmp_4qua_ku"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmp_4qua_ku': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0;33mStack dump detected[0m
+[0;33m0x403806d0: panic_abort at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/panic.c:472
+0x40384f2e: __ubsan_include at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/ubsan.c:313
+[0m
+[0;33m0x40380001: _vector_table at ??:?
+[0m
+[0;33mFailed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', 'C:\\Users\\Adalb\\Desktop\\QuartoAno\\ASE\\projeto\\sd_card\\sdspi\\build\\sd_card.elf', '-ex', 'target remote | "C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe" -m esp_idf_panic_decoder --target esp32c3 "C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmp6bneb6o8"', '-ex', 'bt']' returned non-zero exit status 1.
+b"error starting child process '| C:\\Espressif\\python_env\\idf5.2_py3.11_env\\Scripts\\python.exe -m esp_idf_panic_decoder --target esp32c3 C:\\Users\\Adalb\\AppData\\Local\\Temp\\tmp6bneb6o8': CreateProcess: No such file or directory\r\nNo stack.\r\n"
+
+[0m
+[0;33m0x403806bc: esp_restart_noos at C:/Espressif/frameworks/esp-idf-v5.2/components/esp_system/port/soc/esp32c3/system_internal.c:111
+[0m
+[0m

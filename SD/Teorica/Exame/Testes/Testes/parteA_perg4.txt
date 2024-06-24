@@ -1,0 +1,211 @@
+
+	-----------------------------------------------------------------
+						Parte A - Pergunta 4
+	-----------------------------------------------------------------
+	
+	
+		(Teste 1 - 2007) 
+	
+			No âmbito da comunicação entre pares (peer-to-peer communication), descreva detalhadamente um algoritmo que permite de uma forma distribuída e dinâmica a um dado 
+			processo assumir-se como líder. Indique claramente quais os pressupostos que estão subentendidos.
+			
+			Pressupostos: 
+				- Cada processo tem um número de identificação único.
+				- Os processos devem saber os ID's dos outros processos.
+				- O processo com o maior ID irá ser escolhido como o líder.
+			
+			BULLY:
+				
+				--> Um determinado processso envia um request ao coordenado, se o coordenador não responder num período de tempo x, então 
+					significa que o coordenador não está ativo. Nesse caso, é necessário atribuir a um novo processo a responsabilidade de ser líder.
+				
+				--> O processo de eleição começa com um determinado processo a enviar uma mensagem de eleição a todos os processos com maior 
+					ID que o dele. Se esses processos reponderem com uma mensagem OK significa que eles têm maior prioridade que o processo que lhes 
+					enviou a mensagem de eleição e, dessa forma, a respondabilidade de encontrar um coordenar fica entre eles. Se Se os processos não 
+					responderem significa que o processo da mensagem de eleição é o escolhido como líder.
+					
+				--> O líder envia uma mensagem broadcast a dizer que é o coordenador
+	
+	
+-------------------------------
+-------------------------------
+
+	(Teste 1 - 2008)
+	
+			No âmbito da comunicação entre pares, descreva detalhadamente um algoritmo que permita de uma forma
+			distribuída e dinâmica fazer­se a sincronização dos relógios locais. Que tipo de ordenação de acontecimentos é
+			que resulta da sua aplicação. Mostre como é possível garantir a consistência de dados entre diferentes cópias
+			localizadas em locais geograficamente separados quando ele é usado.
+
+
+					(................)
+			
+-------------------------------
+-------------------------------
+
+	(Teste 1 - 2012)
+	
+			Considere uma situação no contexto da comunicação entre pares em que coexistem três processos, P1, P2 e P3, que pretendem
+			eleger um deles como chefe. Descreva os passos principais de um algoritmo que conduz a essa eleição. Admita que não há perda de mensagens.
+			
+				Pressupostos: 
+					- Cada processo tem um número de identificação único.
+					- Os processos devem saber os ID's dos outros processos.
+					- O processo com o maior ID irá ser escolhido como o líder.
+				
+				BULLY:
+					
+					--> Um determinado processso envia um request ao coordenado, se o coordenador não responder num período de tempo x, então 
+						significa que o coordenador não está ativo. Nesse caso, é necessário atribuir a um novo processo a responsabilidade de ser líder.
+					
+					--> O processo de eleição começa com um determinado processo a enviar uma mensagem de eleição a todos os processos com maior 
+						ID que o dele. Se esses processos reponderem com uma mensagem OK significa que eles têm maior prioridade que o processo que lhes 
+						enviou a mensagem de eleição e, dessa forma, a respondabilidade de encontrar um coordenar fica entre eles. Se Se os processos não 
+						responderem significa que o processo da mensagem de eleição é o escolhido como líder.
+						
+					--> O líder envia uma mensagem broadcast a dizer que é o coordenador
+			
+			
+	--- --- --- --- --- --- --- --- --- --- 
+	
+	(Teste 1 - 2016)
+	
+			Considere uma situação no contexto da comunicação entre pares em que coexistem três processos, P1, P2 e P3, que pretendem 
+			eleger um deles como chefe. Descreva os passos principais de um algoritmo que conduz a essa eleição. Admita que não há perda de mensagens, 
+			nem que qualquer dos processos falha. Como alteraria o algoritmo se as suposições anteriores deixassem de ser válidas.
+			
+				Pressupostos: 
+					- Cada processo tem um número de identificação único.
+					- Os processos devem saber os ID's dos outros processos.
+					- O processo com o maior ID irá ser escolhido como o líder.
+				
+				BULLY:
+					
+					--> Um determinado processso envia um request ao coordenado, se o coordenador não responder num período de tempo x, então 
+						significa que o coordenador não está ativo. Nesse caso, é necessário atribuir a um novo processo a responsabilidade de ser líder.
+					
+					--> O processo de eleição começa com um determinado processo a enviar uma mensagem de eleição a todos os processos com maior 
+						ID que o dele. Se esses processos reponderem com uma mensagem OK significa que eles têm maior prioridade que o processo que lhes 
+						enviou a mensagem de eleição e, dessa forma, a respondabilidade de encontrar um coordenar fica entre eles. Se Se os processos não 
+						responderem significa que o processo da mensagem de eleição é o escolhido como líder.
+						
+					--> O líder envia uma mensagem broadcast a dizer que é o coordenador
+			
+-------------------------------
+-------------------------------
+
+	(Teste 1 - 2012)
+
+			Consider an application where up to eight similar processes cooperate among themselves. The number of processes presently available changes dynamically. 
+			When the plataform that runs a given process is switched on, the process has first to join the group before starting doint useful work; 
+			When the plataform that runs a given process is switched off, the reamaining group members, when they become aware of the fact, have to take it out of 
+			the group.
+			
+			What kind of data has each process to keep internally in order for group operation to be possible ?
+			Sketch the operations required for a process to join the group and to be taken out of the group. 
+			
+				
+			Informação que os processo têm de manter internamente: 
+			
+				-- Identificação do Processo : Cada processo tem de ter um id único que o diferencie dos outros processos;
+				
+				-- Lista dos Membros do Grupo: A lista contém informação acerca dos processos que estao atualmente no grupo.
+																		Pode incluir o ID dos processos, enderecos de rede, ou outra info. relevante para conseguir identificá-los
+																		e comunicar com outros membros do grupo.
+																		
+			Processo de se juntar ao grupo: 
+			
+			-- O processo obtém o seu ID único.
+			-- O processo inicia a comunicação com o grupo, enviando um request com a sua intenção de se juntar. 
+			-- O grupo recebe o request do processo e adiciona ao conjunto dos dados a info. deste processo.
+			-- O membros do grupo propagam esta mensagem, com a info do novo processo, para os restantes membros e para o novo processo
+			-- O novo atualiza a sua lista de informação dos outros membros e fica pronto para ser inserido no grupo. 
+			
+			
+			Processo de sair do Grupo: 
+			
+			-- O processo que pretende sair notifica todos os membros do grupo acerca da sua saida.
+			-- Os restantes membros do grupo removem a informação que têm o do processo que irá sair.
+			-- Os membros propagam essa informação para os restantes e o processo que sairá remove a informação local que tem de todos os outros. 
+			-- Ficando essa info. atualizada está pronto a sair.
+			
+			
+-------------------------------
+-------------------------------
+
+	(Teste 1 - 2015)
+	
+		Em que consiste a migração de código ? Suponha que uma máquina paralela é composta por quatro nós de processamento e que se pretende 
+		efetuar o balanceamento de carga entre eles (manter a fração de ocupação do proessador razoavelmente equilibrada entre eles). Descreva 
+		com algum detalhe a arquitetura de um modelo de gestão de processamento que procure cumprir tal objetivo.
+		
+		
+			Migração de código é o processo de transferência de um sistema computacional para outro num ambiente distribuido. O objetivo é otimizar 
+			a utilização de recursos, o balanceamento da carga e a tolerância de falhas. Quando ocorre a migração de código, o estado do processo, incluindo 
+			a sua memória, contexto de execução e recursos são transferidos para o outro nó de processamento.
+			
+			A arquitetura de um modelo de gestão de processamento poderá incluir um Load Balancer que será respondesável pela receção da informação e decisão 
+			da distribuição dessa informação em função dos nós de processamento a que ele está ligado.
+		
+-------------------------------
+-------------------------------
+
+	(Teste 1 - 2017)
+	
+		Suppose we want to ensure service availability in a clinte-server model. In order to achieve this aim,  a resource replication variant where the server is installed in two
+		plataforms, is implemented. In principle, only one of the servers is active at a time and insteracts with the clients. When it fails, the other starts operating immediately, replacing it.
+		
+		Draw a functional diagram that depicts the organization and list three problems which must be solved for the system to work properly. 
+		
+		
+				Clientes 		------------------- 		Server 1 (Ativo)
+																					|
+																					|
+										- - - - - - - - - - - 		Server 2 (Inativo)
+										
+				Três problemas para serem resolvidos:
+				
+					--- Deteção de Falhas: O sistema necessita de um mecanismo para saber se o servidor 1 falhar. Pode ser através de técnicas de heartbear ou timeouts.
+					
+					--  Processo de ativação pós-falha: 	O sistema necessita de um mecanismo que permita fazer a migração de toda a info do servidor 1 para o servidor 2, caso 
+																					o servidor 1 falhe. Esse mecanismo tem de permitir transferir toda a info. necessária (estado da memória, configuracoes da rede por exemplo)
+																					de forma a não prejudicar a disponíbilidade do serviço aos clientes.
+																	
+					--  Sincronização e Consistência: 	Since Server 1 and Server 2 are replicating resources, it is essential to maintain synchronization and consistency between them. 
+																					This involves keeping data and configurations up to date on both servers to ensure that the failover process does not result in data loss or inconsistent states. 
+																					Techniques like data replication, distributed transactions, or consensus protocols may be employed to address this challenge.
+				
+-------------------------------
+-------------------------------
+
+	(Teste 2 - 2018)
+		
+		In peer-to-peer communication, a virtual ring based on the individual id was established for communication through message passing among the active 
+		processing nodes of a distribued system. Describe in deatail the algorithms which allow the insertion or retrieval of a processing node in the ring.
+		
+		Draw diagrams for each case to help clarify your description. Assume that there are neither message loss, nor node crashing.
+		
+		
+		To allow the insertion or retrieval of a processing node in a virtual ring based on individual IDs in a peer-to-peer communication system, we can use two algorithms: Node Insertion Algorithm and Node Retrieval Algorithm.
+
+		Node Insertion Algorithm:
+		This algorithm describes the process of adding a new processing node to the existing ring.
+		
+		Algorithm Steps:
+
+		Let's assume we have an existing virtual ring with some active processing nodes, and we want to insert a new node, Node X.
+		Node X generates a unique ID for itself, which should fall within the range of IDs already present in the ring.
+		Node X sends a message to any existing node in the ring, requesting to join.
+		The existing node receiving the request performs the following steps:
+		a. It identifies the position in the ring where Node X should be inserted based on the ID comparison.
+		b. The existing node splits its outgoing link to the next node in the ring.
+		c. The existing node creates a new outgoing link towards Node X.
+		d. The existing node sends a message to Node X, informing it of its two neighbors (predecessor and successor) in the ring.
+		e. Node X acknowledges the message, and the insertion process is complete.
+		The neighboring nodes of Node X update their predecessor and successor information accordingly.
+	
+		
+
+
+
+	

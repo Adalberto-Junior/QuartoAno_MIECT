@@ -1,0 +1,26 @@
+#include "esp_system.h"
+#include "esp_sleep.h"
+#include "esp_log.h"
+#include "driver/temp_sensor.h"
+
+void app_main() {
+    // Configurar o sensor de temperatura
+    temperature_sensor_config_t temp_config = {
+        .range_min = -10,
+        .range_max = 80
+    };
+    temperature_sensor_handle_t temp_sensor;
+    temp_sensor = temperature_sensor_install(&temp_config);
+
+    while (1) {
+        // Ler o valor do sensor de temperatura
+        float temp_value = temperature_sensor_read(temp_sensor);
+        ESP_LOGI("Temp", "Temperatura: %.2f °C", temp_value);
+
+        // Configurar o temporizador para acordar após 3 segundos
+        esp_sleep_enable_timer_wakeup(3 * 1000000); // 3 segundos em microssegundos
+
+        // Entrar no modo Deep-sleep
+        esp_deep_sleep_start();
+    }
+}

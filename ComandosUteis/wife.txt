@@ -1,0 +1,3 @@
+netsh wlan show profiles 
+netsh wlan show profiles "nome da rede conectado" key = clear
+Exemplo: netsh wlan show profiles OpenLab key = clear

@@ -1,0 +1,2 @@
+set pcname DataServer
+ip 10.4.4.100 10.4.4.10 24

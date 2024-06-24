@@ -1,0 +1,82 @@
+set firewall name FROM-DMZ-TO-INSIDE rule 10 action accept
+set firewall name FROM-DMZ-TO-INSIDE rule 10 description "Accept Established-related connections"
+set firewall name FROM-DMZ-TO-INSIDE rule 10 state established enable
+set firewall name FROM-DMZ-TO-INSIDE rule 10 state related enable
+
+set firewall name FROM-DMZ-TO-OUTSIDE rule 10 action accept
+set firewall name FROM-DMZ-TO-OUTSIDE rule 10 description "Accept Established-related connections"
+set firewall name FROM-DMZ-TO-OUTSIDE rule 10 state established enable
+set firewall name FROM-DMZ-TO-OUTSIDE rule 10 state related enable
+
+set firewall name FROM-INSIDE-TO-DMZ rule 10 action accept
+set firewall name FROM-INSIDE-TO-DMZ rule 10 description "Accept ICMP Echo Request to DMZ"
+set firewall name FROM-INSIDE-TO-DMZ rule 10 destination address 192.1.1.0/24
+set firewall name FROM-INSIDE-TO-DMZ rule 10 icmp type 8
+set firewall name FROM-INSIDE-TO-DMZ rule 10 protocol icmp
+
+set firewall name FROM-INSIDE-TO-DMZ rule 20 action accept
+set firewall name FROM-INSIDE-TO-DMZ rule 20 description "Accept HTTP, HTTPS and SSH from Admin to DMZ"
+set firewall name FROM-INSIDE-TO-DMZ rule 20 destination address 192.1.1.0/24
+set firewall name FROM-INSIDE-TO-DMZ rule 20 destination port 22,80,443
+set firewall name FROM-INSIDE-TO-DMZ rule 20 protocol tcp
+set firewall name FROM-INSIDE-TO-DMZ rule 20 source address 10.3.3.5/24
+
+set firewall name FROM-INSIDE-TO-DMZ rule 20 action accept
+set firewall name FROM-INSIDE-TO-DMZ rule 20 description "Accept HTTP and HTTPS from Inside to DMZ"
+set firewall name FROM-INSIDE-TO-DMZ rule 20 destination address 192.1.1.0/24
+set firewall name FROM-INSIDE-TO-DMZ rule 20 destination port 80,443
+set firewall name FROM-INSIDE-TO-DMZ rule 20 protocol tcp
+set firewall name FROM-INSIDE-TO-DMZ rule 20 source address 10.2.2.0/24
+set firewall name FROM-INSIDE-TO-DMZ rule 20 source address 10.4.4.0/24
+
+set firewall name FROM-INSIDE-TO-DMZ rule 30 action accept
+set firewall name FROM-INSIDE-TO-DMZ rule 30 description "Allow DNS access to DMZ"
+set firewall name FROM-INSIDE-TO-DMZ rule 30 destination address 192.1.1.0/24
+set firewall name FROM-INSIDE-TO-DMZ rule 30 destination port 53
+set firewall name FROM-INSIDE-TO-DMZ rule 30 protocol udp
+
+set firewall name FROM-INSIDE-TO-DMZ rule 40 action accept
+set firewall name FROM-INSIDE-TO-DMZ rule 40 description "Accept FTP, MTP and SMTP from Data Server to DMZ"
+set firewall name FROM-INSIDE-TO-DMZ rule 40 destination address 192.1.1.0/24
+set firewall name FROM-INSIDE-TO-DMZ rule 40 destination port 21,57,587
+set firewall name FROM-INSIDE-TO-DMZ rule 40 protocol tcp
+set firewall name FROM-INSIDE-TO-DMZ rule 40 source address 10.4.4.100/32
+
+set firewall name FROM-INSIDE-TO-DMZ rule 41 action accept
+set firewall name FROM-INSIDE-TO-DMZ rule 41 description "Accept SMP(Message Send Protocol) from Data Server to DMZ"
+set firewall name FROM-INSIDE-TO-DMZ rule 41 destination address 192.1.1.0/24
+set firewall name FROM-INSIDE-TO-DMZ rule 41 destination port 18
+set firewall name FROM-INSIDE-TO-DMZ rule 41 protocol udp
+set firewall name FROM-INSIDE-TO-DMZ rule 41 source address 10.4.4.100/32
+
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 10 action accept
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 10 description "Accept UDP from ports 6000-7000"
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 10 destination port 6000-7000
+set firewall name FROM-INSIDE-TO-OUTSIDE rule 10 protocol udp
+
+set firewall name FROM-OUTSIDE-TO-DMZ rule 10 action accept
+set firewall name FROM-OUTSIDE-TO-DMZ rule 10 description "Accept ICMP Echo Request to DMZ Public Page"
+set firewall name FROM-OUTSIDE-TO-DMZ rule 10 destination address 192.1.1.150/32
+set firewall name FROM-OUTSIDE-TO-DMZ rule 10 icmp type 8
+set firewall name FROM-OUTSIDE-TO-DMZ rule 10 protocol icmp
+
+set firewall name FROM-OUTSIDE-TO-DMZ rule 20 action accept
+set firewall name FROM-OUTSIDE-TO-DMZ rule 20 description "Accept HTTPS to Public Page"
+set firewall name FROM-OUTSIDE-TO-DMZ rule 20 destination address 192.1.1.150/32
+set firewall name FROM-OUTSIDE-TO-DMZ rule 20 destination port 443
+set firewall name FROM-OUTSIDE-TO-DMZ rule 20 protocol tcp
+
+set firewall name FROM-OUTSIDE-TO-DMZ rule 30 action accept
+set firewall name FROM-OUTSIDE-TO-DMZ rule 30 description "Accept SMTP to Public Page"
+set firewall name FROM-OUTSIDE-TO-DMZ rule 30 destination address 192.1.1.150/32
+set firewall name FROM-OUTSIDE-TO-DMZ rule 30 destination port 465
+set firewall name FROM-OUTSIDE-TO-DMZ rule 30 protocol tcp
+
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 10 action accept
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 10 description "Accept Established-related connections"
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 10 state established enable
+set firewall name FROM-OUTSIDE-TO-INSIDE rule 10 state related enable
+
+
+
+
